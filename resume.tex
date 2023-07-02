@@ -1,0 +1,195 @@
+\documentclass[a4paper]{article}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\setlist{nosep}
+\raggedright
+\input{glyphtounicode}
+\pdfgentounicode=1
+\usepackage[left=0.5in,top=0.25in,right=0.5in,bottom=0.25in]{geometry}
+% \usepackage{tgschola}
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}
+\usepackage[absolute]{textpos}
+
+% ----------- Config -----------
+
+\hypersetup {
+    colorlinks   = true, %Colours links instead of ugly boxes
+    urlcolor     = blue, %Colour for external hyperlinks
+    linkcolor    = blue, %Colour of internal links
+}
+
+% ----------- End of Config -----------
+
+% ----------- Definitions -----------
+    
+\newcommand{\bulletSep} { \vspace{1.5mm} }
+
+\newcommand{\sectionSep} { \vspace{3mm} }
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-15pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} {
+        \fontfamily{qcs}\selectfont \large \scshape #1
+    }}
+    \vspace*{-6pt} \lineunder
+    \vspace{1mm}
+}
+
+\newcommand{\educationItem}[5]{
+    \textbf{#1}\hfill #2\\
+    #3, \textit{#4} \hfill #5\\
+}
+
+\newcommand{\experienceItem}[5]{
+    \textbf{#1} \hfill #2 \\
+    \textit{#3} \hfill #4 \\
+    \begin{itemize}
+        #5
+    \end{itemize}
+}
+
+\newcommand{\projectItem}[5]{
+    {\textbf{#1}} {(\sl #2)}\hfill
+    \ifx&#3&%
+    % #3 is empty
+    \href{#4}{Github}\\
+    \else
+    % #3 is nonempty
+    \href{#3}{Live Preview} | \href{#4}{Github}\\
+    \fi
+    \begin{itemize}
+        #5
+    \end{itemize}
+}
+
+
+% ----------- End of definitions -----------
+
+\begin{document}
+
+% ----------- Profile -----------
+
+\begin{center}
+    {\Huge \scshape \fontfamily{qcs}\selectfont Akshat Aggarwal}\\
+    \vspace{0.5mm}
+    % \href{}{Portfolio} $\cdot$
+    LinkedIn: \href{https://www.linkedin.com/in/akshataggarwal1411/}{akshataggarwal1411} $\cdot$
+    Github: \href{https://github.com/AkshatAggarwal14}{AkshatAggarwal14} $\cdot$
+    Codeforces: \href{https://codeforces.com/profile/master._.mind}{master.\_.mind} $\cdot$
+    Codechef: \href{https://www.codechef.com/users/master_mind14}{master\_mind14} \\
+    \vspace{1mm}
+    Email: \href {mailto:akshataggarwal1411@gmail.com}{akshataggarwal1411@gmail.com} $\cdot$ Mobile: (+91) 78762 12728\\
+\end{center}
+
+\vspace{-2mm}
+
+% ----------- Education -----------
+
+\header{Education}
+
+\educationItem{National Institute of Technology, Hamirpur}{Hamirpur}{Bachelor of Technology, Computer Science \& Enginnering}{CGPA: 9.69}{Dec 2020 - Present}
+\bulletSep
+
+\educationItem{The Scholars' Home}{Paonta Sahib}{Higher Secondary ($12^{th}$)}{Percentage: 97}{Apr 2019 - Mar 2020}
+\sectionSep
+
+% ----------- Work Experience -----------
+
+\header{Work Experience}
+
+\experienceItem{Coding Ninjas}{Remote}{Technical Content Writer Intern}{Mar 2023 - Jun 2023}{
+    \item Created high-quality content related to various programming languages, frameworks, and tools.
+    \item Wrote and edited technical blog posts, tutorials, etc., that help students learn and excel in their programming skills.
+}
+\bulletSep
+
+\experienceItem{Coding Shuttle}{Remote}{Problem Setter}{Feb 2023 - Mar 2023}{
+    \item Generated test cases and optimal solutions for problems based on Data Structures and Algorithms.
+}
+\sectionSep
+
+% ----------- Volunteer Experience -----------
+
+\header{Volunteer Experience}
+
+\experienceItem{CSEC NITH}{NIT Hamirpur}{Coordinator}{Apr 2021 - Present}{
+    \item Designed problems and wrote editorials for monthly programming contest, Heuristics.
+    \item Volunteered on `Software Freedom Day', promoted FOSS and installed linux distributions on 50+ PCs.
+    \item Conducted programming meets on various topics.
+}
+\bulletSep
+
+\experienceItem{CodeChef NITH Chapter}{NIT Hamirpur}{Chapter Leader}{Jul 2021 - Jan 2022}{
+    \item Organized workshops on topics `Introduction to Competitive Programming' and `STL' (100+ attendees each).
+    \item Conducted numerous programming contests like `Regular Contest 1', `CP Liftoff' etc (50+ participants each).
+}
+\sectionSep
+
+% ----------- Projects -----------
+
+\header{Projects}
+
+\projectItem{RFID Attendance System}{Node.js, Express, MongoDB, React, Arduino}{}{https://github.com/AkshatAggarwal14/RFID-Attendance-system}{
+    \item Developed an attendance tracking system that allows users to register their attendance by scanning RFID cards using an RFID reader.
+    \item Established seamless serial communication between the Arduino board and Node.js.
+}
+\bulletSep
+
+\projectItem{Paint Application}{C++, WinBGIm Graphics Library}{}{https://github.com/Sahil-187/Paint-Application}{
+    \item Created a comprehensive paint application with \textbf{user-friendly graphical interface}.
+    \item \textbf{Features}: Save as JPEG file, Color Palette, Size options, etc.
+    \item \textbf{Tools}: Brush, Flood Fill, Rectangle, Circle, Line, etc.
+}
+\bulletSep
+
+\projectItem{Sort Visualizer}{p5.js, CSS3, HTML5}{https://akshataggarwal14.github.io/Sorting-Algorithms/}{https://github.com/AkshatAggarwal14/Sorting-Algorithms/}{
+    \item Developed a web application to visualize various sorting algorithms.
+    \item Implemented Interactive UI features, including the selection of sorting algorithms and adjustable parameters for visualization size and speed.
+}\bulletSep
+
+\projectItem{React Wordle}{React, CSS3}{https://wordle-with-react.netlify.app/}{https://github.com/AkshatAggarwal14/react-wordle}{
+    \item Created a web-based word-guessing game where users can guess a hidden word by entering their guesses.
+    \item Implemented animations and media queries to enhance the user experience.
+}
+\sectionSep
+
+% ----------- Achievements -----------
+
+\header{Achievements}
+\begin{itemize}
+    \item \textbf{\href{https://www.codechef.com/users/master_mind14}{6 Star}} (Max Rating - 2211) on Codechef (\textbf{380th out of 200K} Indian users).
+    \item \textbf{\href{https://codeforces.com/profile/master._.mind}{Expert}} (Max Rating - 1671) on Codeforces.
+    \item Top \textbf{\href{https://leetcode.com/AkshatAggarwal14/}{1.9\%}} on Leetcode (Max Rating - 2079).
+    \item Ranked \textbf{\href{https://www.codechef.com/rankings/COOK139B?itemsPerPage=100&order=asc&page=1&search=master_mind14&sortBy=rank}{30th}} globally out of 2900+ participants in \textbf{March Cook-Off 2022} Div-2.
+    \item Ranked \textbf{\href{https://codeforces.com/contest/1729/standings/participant/140098304\#p140098304}{143rd}} globally (39th in India) out of 18K+ participants in \textbf{Codeforces Round 820}.
+    \item Ranked \textbf{\href{https://clist.by/standings/kick-start-round-g-31261744/?find_me=45689030}{318th}} out of 12K+ participants in \textbf{Google Kickstart} 2022 Round G.
+\end{itemize}
+\sectionSep
+
+% ----------- Skills -----------
+
+\header{Skills}
+\textbf{Languages:} C/C++, Python, Javascript, Go
+\quad \textbf{Frameworks:} React, Node, Express
+\quad \textbf{Databases:} MySQL, MongoDB
+\quad \textbf{Tools:} Git, GNU/Linux
+\quad \textbf{Others:} Bash, Markdown, \LaTeX, Data Structures and Algorithms
+\sectionSep
+
+% ----------- Coursework -----------
+\header{Coursework}
+Data Structures \& Algorithms,
+Operating Systems,
+Object Oriented Programming,
+Computer Organization \& Architecture,
+Database Management Systems,
+Compiler Design,
+Distributed Systems,
+Computer Networks
+
+\end{document}
