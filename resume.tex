@@ -6,7 +6,7 @@
 \input{glyphtounicode}
 \pdfgentounicode=1
 \usepackage[left=0.5in,top=0.25in,right=0.5in,bottom=0.25in]{geometry}
-\usepackage[scale=0.95]{tgschola}
+% \usepackage[scale=0.95]{tgschola}
 \usepackage[T1]{fontenc}
 \usepackage{titlesec}
 
@@ -53,7 +53,7 @@
 }
 
 \newcommand{\projectItem}[5]{
-    {\textbf{#1}} {(\it #2)}\hfill
+    {\textbf{#1}} {(\sl #2)}\hfill
     \ifx&#3&%
     % #3 is empty
     \href{#4}{Github}\\
@@ -198,5 +198,18 @@ Database Management Systems,
 Compiler Design,
 Distributed Systems,
 Computer Networks
+
+\def\samplefont#1{%
+    % set font style and save name
+    #1\edef\savedname{\fontname\font}%
+    % print small sample
+    {\leavevmode\tt\hbox to 1in{\savedname:\hss}}%
+    abcxyz ABCXYZ 123\par
+}
+\samplefont\rm
+\samplefont\tt
+\samplefont\bf
+\samplefont\it
+\samplefont\sl
 
 \end{document}
