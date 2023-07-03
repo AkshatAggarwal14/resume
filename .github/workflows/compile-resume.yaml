@@ -15,13 +15,13 @@ jobs:
 
             - name: Install deps
               run: |
-                  sudo apt-get install texlive-latex-base poppler-utils texlive-extra-utils texlive-latex-extra tex-gyre --no-install-recommends
+                  sudo apt-get install texlive-latex-base poppler-utils texlive-latex-extra tex-gyre --no-install-recommends
 
             - name: Check out repository code
               uses: actions/checkout@v3
 
             - name: Tex to PDF
-              run: texliveonfly resume.tex
+              run: pdflatex resume.tex
 
             - name: PDF to png
               run: pdftoppm -png -singlefile resume.pdf resume
