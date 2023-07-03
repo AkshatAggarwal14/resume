@@ -1,27 +1,24 @@
-name: "🏗️ Recompile resume"
+name: "📝 Regenerate README"
 on:
     workflow_dispatch:
     push:
         branches:
             - main
         paths:
-            - resume.tex
+            - resume.pdf
 jobs:
     recompile-resume:
         runs-on: ubuntu-latest
         steps:
-            - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-            - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+            - run: echo "The job was automatically triggered by a ${{ github.event_name }} event."
+            - run: echo "This job is now running on a ${{ runner.os }} server hosted by GitHub!"
 
             - name: Install deps
               run: |
-                  sudo apt-get install texlive-latex-base poppler-utils texlive-latex-extra tex-gyre --no-install-recommends
+                  sudo apt-get install poppler-utils--no-install-recommends
 
             - name: Check out repository code
               uses: actions/checkout@v3
-
-            - name: Tex to PDF
-              run: pdflatex resume.tex
 
             - name: PDF to png
               run: pdftoppm -png -singlefile resume.pdf resume
@@ -35,12 +32,12 @@ jobs:
                   committer: ${{github.repository_owner}} <${{ github.repository_owner }}@users.noreply.github.com>
                   author: ${{github.repository_owner}} <${{ github.repository_owner }}@users.noreply.github.com>
                   signoff: false
-                  branch: recompile-resume
+                  branch: regen-readme
                   delete-branch: true
-                  title: "🏗️ Recompile resume"
+                  title: "📝 Regenerate README"
                   body: |
-                      The resume was recompiled by GitHub Action 'Recompile Resume'
+                      The resume was recompiled by GitHub Action 'Recompile README'
                   labels: |
-                      recompilation
+                      regeneration
                   reviewers: ${{ github.repository_owner }}
                   draft: false
