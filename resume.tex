@@ -36,7 +36,7 @@
         \fontfamily{qcs}\selectfont \large \scshape #1
     }}
     \vspace*{-6pt} \lineunder
-    \vspace{1mm}
+    \vspace{0.5mm}
 }
 
 \newcommand{\educationItem}[5]{
@@ -85,7 +85,7 @@
     Email: \href {mailto:akshataggarwal1411@gmail.com}{akshataggarwal1411@gmail.com} $\cdot$ Mobile: (+91) 78762 12728\\
 \end{center}
 
-\vspace{-2mm}
+\vspace{-3mm}
 
 % ----------- Education -----------
 
@@ -173,11 +173,19 @@
 % ----------- Skills -----------
 
 \header{Skills}
-\textbf{Languages:} C/C++, Python, Javascript, Go
-\quad \textbf{Frameworks:} React, Node, Express
-\quad \textbf{Databases:} MySQL, MongoDB
-\quad \textbf{Tools:} Git, GNU/Linux
-\quad \textbf{Others:} Bash, Markdown, \LaTeX, Data Structures and Algorithms
+% [t] option means top
+\begin{minipage}[t]{0.6\textwidth}
+    % Column 1
+    C/C++, Python, Javascript, Go\\
+    \textbf{Databases:} MySQL, MongoDB\\
+    \textbf{Others:} Bash, Markdown, \LaTeX, Data Structures and Algorithms
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.33\textwidth}
+    % Column 2
+    \textbf{Frameworks:} React, Node, Express\\
+    \textbf{Tools:} Git, GNU/Linux
+\end{minipage}
 \sectionSep
 
 % ----------- Coursework -----------
