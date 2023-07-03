@@ -6,7 +6,7 @@
 \input{glyphtounicode}
 \pdfgentounicode=1
 \usepackage[left=0.5in,top=0.25in,right=0.5in,bottom=0.25in]{geometry}
-% \usepackage{tgschola}
+\usepackage[scale=0.95]{tgschola}
 \usepackage[T1]{fontenc}
 \usepackage{titlesec}
 
@@ -53,7 +53,7 @@
 }
 
 \newcommand{\projectItem}[5]{
-    {\textbf{#1}} {(\sl #2)}\hfill
+    {\textbf{#1}} {(\it #2)}\hfill
     \ifx&#3&%
     % #3 is empty
     \href{#4}{Github}\\
