@@ -15,7 +15,7 @@ jobs:
 
             - name: Install deps
               run: |
-                  sudo apt-get install basictex
+                  sudo apt-get install texlive-latex-base poppler-utils texlive-latex-extra tex-gyre --no-install-recommends
                   sudo tlmgr install texliveonfly
 
             - name: Check out repository code
