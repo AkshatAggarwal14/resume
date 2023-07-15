@@ -21,7 +21,7 @@ jobs:
               uses: actions/checkout@v3
 
             - name: PDF to png
-              run: pdftoppm -png -singlefile resume.pdf resume
+              run: pdftoppm -png -singlefile resume.pdf img/resume
 
             - name: Create Pull Request
               id: cpr
