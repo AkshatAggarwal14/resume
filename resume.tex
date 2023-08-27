@@ -16,9 +16,8 @@
 
 \hypersetup {
     % pdfborderstyle={/S/U/W 1}, % underline links instead of boxes
-    % urlbordercolor=black        % color of external links
     colorlinks   = true, %Colours links instead of ugly boxes
-    urlcolor     = blue, %Colour for external hyperlinks
+    urlcolor     = black, %Colour for external hyperlinks
 }
 
 \setlist{nosep}
@@ -71,14 +70,22 @@
     \end{itemize}
 }
 
+\newcommand{\linkFont}[1]{
+    {\fontfamily{lmtt}\selectfont#1}
+}
+
+\newcommand{\link}[2]{
+    {\fontfamily{lmtt}\selectfont\href{#1}{#2}}
+}
+
 \newcommand{\projectItem}[5]{
     {\textbf{#1}} {(\sl #2)}\hfill
     \ifx&#3&%
     % #3 is empty
-    \href{#4}{Github}\\
+    \link{#4}{Github}\\
     \else
     % #3 is nonempty
-    \href{#3}{Live Preview} | \href{#4}{Github}\\
+    \linkFont{\href{#3}{Live Preview}~|~\href{#4}{Github}}\\
     \fi
     \begin{itemize}
         #5
@@ -86,7 +93,8 @@
 }
 
 \newcommand{\image}[1]{
-    \begingroup\normalfont
+    \begingroup
+    \normalfont
     \Large
     \includegraphics[height=\fontcharht\font`\B]{#1.png}%
     \endgroup
@@ -102,9 +110,9 @@
 \begin{center}
     {\Huge \scshape \fontfamily{qcs}\selectfont Akshat Aggarwal}\\
     \vspace{0.5mm}
-    \faPhone~+91 78762 12728
+    \faPhone~(+91) 7876212728
     $\cdot$
-    \href{mailto:akshataggarwal1411@gmail.com}{akshataggarwal1411@gmail.com}
+    \link{mailto:akshataggarwal1411@gmail.com}{akshataggarwal1411@gmail.com}
     $\cdot$
     \href{https://www.linkedin.com/in/akshataggarwal1411/}{Linked\faLinkedinSquare~Profile}
 \end{center}
@@ -127,7 +135,7 @@
 
 \experienceItem{Coding Ninjas}{Remote}{Technical Content Writer Intern}{Mar 2023 - Jun 2023}{
     \item Created \textbf{high-quality} content covering a wide range of programming languages, frameworks, and tools.
-    \item Authored and edited \textbf{technical blog posts, tutorials}, etc., aimed at helping students learn and improve.
+    \item Authored and edited over 30 \textbf{technical blog posts, tutorials}, etc., aimed at helping students learn and improve.
 }
 \bulletSep
 
@@ -135,69 +143,6 @@
 %     \item Generated test cases and optimal solutions for problems based on \textbf{Data Structures and Algorithms}.
 % }
 % \sectionSep
-
-% ----------- Projects -----------
-
-\header{Projects}
-
-\projectItem{RFID Attendance System}{Node.js, React, Express, MongoDB, Arduino}{}{https://github.com/AkshatAggarwal14/RFID-Attendance-system}{
-    \item Developed an attendance tracking system that allows users to register their attendance by \textbf{scanning} RFID cards using an RFID reader.
-    \item Established seamless \textbf{serial communication} between the Arduino board and Node.js.
-}
-\bulletSep
-
-\projectItem{Paint Application}{C++, WinBGIm Graphics Library}{}{https://github.com/Sahil-187/Paint-Application}{
-    \item Created a comprehensive paint application with \textbf{user-friendly graphical interface}.
-    \item \textbf{Features}: Save as JPEG file, Color Palette, Size options, etc.
-    \item \textbf{Tools}: Brush, Flood Fill, Rectangle, Circle, Line, etc.
-}
-\bulletSep
-
-\projectItem{Sort Visualizer}{p5.js, CSS3, HTML5}{https://akshataggarwal14.github.io/Sorting-Algorithms/}{https://github.com/AkshatAggarwal14/Sorting-Algorithms/}{
-    \item Developed a web application to visualize various sorting algorithms.
-    \item Implemented \textbf{Interactive UI} features, including the selection of sorting algorithms and adjustable parameters for visualization size and speed.
-}\bulletSep
-
-\projectItem{React Wordle}{React, CSS3}{https://wordle-with-react.netlify.app/}{https://github.com/AkshatAggarwal14/react-wordle}{
-    \item Created a web-based \textbf{word-guessing} game where users can guess a hidden word by entering their guesses.
-    \item Implemented animations and media queries to enhance the user experience.
-}
-\sectionSep
-
-% ----------- Achievements -----------
-
-\header{Achievements}
-\image{cc} \textbf{CodeChef} - \textbf{\href{https://www.codechef.com/users/master_mind14}{master\_mind14}}
-\begin{itemize}
-    \item \textbf{6 star} | Maximum Rating: \textbf{2211}
-    \item One of the top \textbf{400} out of \textbf{2,00,000+} Indian users.
-    \item Ranked \textbf{\href{https://www.codechef.com/rankings/COOK139B?itemsPerPage=100&order=asc&page=1&search=master_mind14&sortBy=rank}{30th}} globally out of \textbf{2900+} participants in \textbf{March Cook-Off 2022 Div-2}.
-\end{itemize}
-\tinyBulletSep
-
-\image{cf} \textbf{Codeforces} - \textbf{\href{https://codeforces.com/profile/master._.mind}{master.\_.mind}}
-\begin{itemize}
-    \item \textbf{Expert} | Maximum Rating: \textbf{1671}
-    \item Ranked \textbf{\href{https://codeforces.com/contest/1729/standings/participant/140098304\#p140098304}{143rd}} globally (39th in India) out of \textbf{18,000+} participants in \textbf{Codeforces Round 820}.
-\end{itemize}
-\tinyBulletSep
-
-\image{lc} \textbf{Leetcode} - \textbf{\href{https://leetcode.com/AkshatAggarwal14/}{AkshatAggarwal14}}
-\begin{itemize}
-    \item Top \textbf{1.9\%} (Max Rating - \textbf{2079})
-    \item Ranked \textbf{\href{https://clist.by/standings/biweekly-contest-91-38396296/?country=IN}{99th}} globally (5th in India) out of \textbf{18,000+} participants in \textbf{Biweekly Contest 91}.
-\end{itemize}
-\tinyBulletSep
-
-% https://clist.by/standings/kick-start-round-g-31261744/?find_me=45689030
-\image{google} \textbf{Google} | Ranked \textbf{\href{https://drive.google.com/file/d/1cAIdPLOMWYXWl6qaP8iQeVJv8y2TtfIG/view}{318th}} out of \textbf{12,000+} participants in \textbf{Google Kickstart} 2022 Round G.
-\tinyBulletSep
-
-\image{cisco} \textbf{Cisco} | Selected as one of \textbf{23} finalist teams for \textbf{Code with Cisco} on-site codathon out of \textbf{14,000} participants.
-\tinyBulletSep
-
-\image{stopstalk} \textbf{StopStalk} | Solved \textbf{\href{https://www.stopstalk.com/user/profile/master_mind14}{3000+}} programming problems across all coding platforms.
-\sectionSep
 
 % ----------- Skills -----------
 
@@ -216,6 +161,69 @@
     \textbf{Frameworks:} React, Node, Express\\
     \textbf{Tools:} Git, GNU/Linux
 \end{minipage}
+\sectionSep
+
+
+% ----------- Projects -----------
+
+\header{Projects}
+
+\projectItem{RFID Attendance System}{Node.js, React, Express, MongoDB, Arduino}{}{https://github.com/AkshatAggarwal14/RFID-Attendance-system}{
+    \item Developed a highly efficient attendance tracking system by integrating RFID technology, enabling users to register attendance through \textbf{RFID card scanning} and streamlining attendance process.
+    \item Established seamless \textbf{serial communication} between the Arduino board and Node.js.
+}
+\bulletSep
+
+\projectItem{Paint Application}{C++, WinBGIm Graphics Library}{}{https://github.com/Sahil-187/Paint-Application}{
+    \item Developed a comprehensive paint application with \textbf{user-friendly graphical interface}, allowing users to create digital art effortlessly.
+    \item \textbf{Features}: Save as JPEG file, Color Palette, Size options, etc.
+}
+\bulletSep
+
+\projectItem{Sort Visualizer}{p5.js, CSS3, HTML5}{https://akshataggarwal14.github.io/Sorting-Algorithms/}{https://github.com/AkshatAggarwal14/Sorting-Algorithms/}{
+    \item Created a web application to visualize various sorting algorithms, helping users understand how they work.
+    \item Implemented \textbf{Interactive UI} features, including the selection of sorting algorithms and adjustable parameters for visualization size and speed.
+}\bulletSep
+
+\projectItem{React Wordle}{React, CSS3}{https://wordle-with-react.netlify.app/}{https://github.com/AkshatAggarwal14/react-wordle}{
+    \item Created a web-based \textbf{word-guessing} game where users can guess a hidden word by entering their guesses.
+    \item Implemented animations and media queries to enhance the user experience.
+}
+\sectionSep
+
+% ----------- Achievements -----------
+
+\header{Achievements}
+\image{cc} \textbf{CodeChef} -\textbf{\link{https://www.codechef.com/users/master_mind14}{master\_mind14}}
+\begin{itemize}
+    \item Achieved \textbf{6 star} rating with a peak rating of \textbf{2211}.
+    \item Ranked among the top \textbf{400} out of \textbf{2,00,000+} Indian users.
+    \item Ranked\textbf{\link{https://www.codechef.com/rankings/COOK139B?itemsPerPage=100&order=asc&page=1&search=master_mind14&sortBy=rank}{30th}}globally out of \textbf{2900+} participants in \textbf{March Cook-Off 2022 Div-2}.
+\end{itemize}
+\tinyBulletSep
+
+\image{cf} \textbf{Codeforces} -\textbf{\link{https://codeforces.com/profile/master._.mind}{master.\_.mind}}
+\begin{itemize}
+    \item Achieved the title of \textbf{Expert} with a peak rating of \textbf{1671}.
+    \item Ranked\textbf{\link{https://codeforces.com/contest/1729/standings/participant/140098304\#p140098304}{143rd}}globally (39th in India) out of \textbf{18,000+} participants in \textbf{Codeforces Round 820}.
+\end{itemize}
+\tinyBulletSep
+
+\image{lc} \textbf{Leetcode} -\textbf{\link{https://leetcode.com/AkshatAggarwal14/}{AkshatAggarwal14}}
+\begin{itemize}
+    \item Ranked among top \textbf{1.9\%} users on Leetcode with a maximum Rating of \textbf{2079}
+    \item Ranked\textbf{\link{https://clist.by/standings/biweekly-contest-91-38396296/?country=IN}{99th}}globally (5th in India) out of \textbf{18,000+} participants in \textbf{Biweekly Contest 91}.
+\end{itemize}
+\tinyBulletSep
+
+% https://clist.by/standings/kick-start-round-g-31261744/?find_me=45689030
+\image{google} \textbf{Google} | Ranked\textbf{\link{https://drive.google.com/file/d/1cAIdPLOMWYXWl6qaP8iQeVJv8y2TtfIG/view}{318th}}out of \textbf{12,000+} participants in \textbf{Google Kickstart} 2022 Round G.
+\tinyBulletSep
+
+\image{cisco} \textbf{Cisco} | Selected as one of \textbf{23} finalist teams for\textbf{\link{https://drive.google.com/file/d/1eBcJ4Ax0QHJq6Kb9MObrU1M9dQ7qvvbI/view?usp=sharing}{Code with Cisco}}on-site codathon out of \textbf{14,000} participants.
+\tinyBulletSep
+
+\image{stopstalk} \textbf{StopStalk} | Solved\textbf{\link{https://www.stopstalk.com/user/profile/master_mind14}{3000+}}programming problems across all coding platforms.
 \sectionSep
 
 % ----------- Coursework -----------
