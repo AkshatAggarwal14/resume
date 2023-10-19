@@ -35,9 +35,9 @@
 
 \newcommand{\tinyBulletSep} { \vspace{1.2mm} }
 
-\newcommand{\bulletSep} { \vspace{2mm} }
+\newcommand{\bulletSep} { \vspace{1.5mm} }
 
-\newcommand{\sectionSep} { \vspace{2.5mm} }
+\newcommand{\sectionSep} { \vspace{2.2mm} }
 
 \newcommand{\lineunder} {
     \vspace*{-8pt} \\
@@ -110,13 +110,17 @@
 % ----------- Profile -----------
 
 \begin{center}
-    {\Huge \scshape \fontfamily{qcs}\selectfont Akshat Aggarwal}\\
-    \vspace{0.5mm}
-    \faPhone~(+91) 7876212728
-    $\cdot$
-    \link{mailto:akshataggarwal1411@gmail.com}{akshataggarwal1411@gmail.com}
-    $\cdot$
-    \href{https://www.linkedin.com/in/akshataggarwal1411/}{Linked\faLinkedinSquare~Profile}
+    {\textbf{\Huge \scshape Akshat Aggarwal}} \\ \vspace{1pt}
+    Himachal Pradesh, India \\
+    \small \textcolor{black}{\raisebox{-0.1\height}\faPhone\
+        7876212728} ~ \href{mailto:akshataggarwal1411@gmail.com}{{\raisebox{-0.2\height}\faEnvelope\  \underline{akshataggarwal1411@gmail.com}}} ~
+    \href{https://www.linkedin.com/in/akshataggarwal1411/}{{\raisebox{-0.2\height}\faLinkedinSquare\ \underline{linkedin.com/in/akshataggarwal1411}}}  ~
+    \href{https://github.com/AkshatAggarwal14}{{\raisebox{-0.2\height}\faGithub\ \underline{github.com/AkshatAggarwal14}}}
+    % \faPhone~(+91) 7876212728
+    % $\cdot$
+    % \link{mailto:akshataggarwal1411@gmail.com}{akshataggarwal1411@gmail.com}
+    % $\cdot$
+    % \href{https://www.linkedin.com/in/akshataggarwal1411/}{Linked\faLinkedinSquare~Profile}
 \end{center}
 
 \vspace{-2mm}
@@ -125,10 +129,10 @@
 
 \header{Education}
 
-\educationItem{National Institute of Technology, Hamirpur}{Hamirpur}{Bachelor of Technology, Computer Science \& Enginnering}{CGPA: 9.69}{Dec 2020 - Present}
+\educationItem{National Institute of Technology, Hamirpur}{Hamirpur, HP}{Bachelor of Technology, Computer Science \& Enginnering}{CGPA: \textbf{9.69}}{Dec 2020 - Present}
 \bulletSep
 
-\educationItem{The Scholars' Home}{Paonta Sahib}{Higher Secondary (12th)}{Percentage: 97}{Apr 2019 - Mar 2020}
+\educationItem{The Scholars' Home}{Paonta Sahib, HP}{Higher Secondary (12th)}{Percentage: \textbf{97}}{Apr 2019 - Mar 2020}
 \sectionSep
 
 % ----------- Work Experience -----------
@@ -156,22 +160,26 @@
 
 \header{Skills}
 % [t] option means top
-\begin{minipage}[t]{0.6\textwidth}
+\begin{minipage}[t]{0.49\textwidth}
+    \begin{tabular}{@{}ll}
+        \textbf{Languages} & C, C++, Python, JavaScript \\
+        \textbf{Databases} & MySQL, MongoDB             \\
+        \textbf{Others}    & Bash, Markdown, \LaTeX
+    \end{tabular}
     % Column 1
     % , Go, MATLAB
-    \textbf{Languages:} C/C++, Python, Javascript\\
-    \textbf{Databases:} MySQL, MongoDB\\
-    \textbf{Others:} Bash, Markdown, \LaTeX
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.33\textwidth}
+\begin{minipage}[t]{0.4\textwidth}
     % Column 2
     % React, 
-    \textbf{Frameworks:} Node, Express\\
-    \textbf{Tools:} Git, GNU/Linux
+    \begin{tabular}{@{}ll}
+        \textbf{Frameworks} & NodeJS, ExpressJS, FastAPI \\
+        \textbf{Tools}      & Git, GNU/Linux, Postman    \\
+        \textbf{}           &                            \\
+    \end{tabular}
 \end{minipage}
 \sectionSep
-
 
 % ----------- Projects -----------
 
