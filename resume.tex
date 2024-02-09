@@ -18,8 +18,8 @@
 
 \hypersetup {
     % pdfborderstyle={/S/U/W 1}, % underline links instead of boxes
-    colorlinks   = true, %Colours links instead of ugly boxes
     urlcolor     = black, %Colour for external hyperlinks
+    colorlinks   = true, %Colours links instead of ugly boxes
 }
 
 \setlist{nosep}
@@ -51,12 +51,13 @@
         \fontfamily{qcs}\selectfont \large \scshape #1
     }}
     \vspace*{-6pt} \lineunder
-    \vspace{0.5mm}
+    \vspace{1.1mm}
 }
 
-\newcommand{\educationItem}[5]{
+\newcommand{\educationItem}[6]{
     \textbf{#1}\hfill #2\\
     #3, \textit{#4} \hfill #5\\
+    #6
 }
 
 \newcommand{\experienceItem}[5]{
@@ -89,6 +90,7 @@
     % #3 is nonempty
     \linkFont{\href{#3}{Live Preview}~|~\href{#4}{Github}}\\
     \fi
+    \vspace{2pt}
     \begin{itemize}
         #5
     \end{itemize}
@@ -125,17 +127,25 @@
 
 \vspace{-2mm}
 
+\hypersetup {
+    urlcolor     = blue, %Colour for external hyperlinks
+}
+
 % ----------- Education -----------
 
 \header{Education}
 
-\educationItem{National Institute of Technology, Hamirpur}{Hamirpur, India}{Bachelor of Technology, Computer Science \& Enginnering}{CGPA: \textbf{9.65}}{Dec 2020 - Present}
-\bulletSep
+\educationItem{National Institute of Technology, Hamirpur}{Hamirpur, India}{Bachelor of Technology, Computer Science \& Enginnering}{CGPA: \textbf{9.65}}{Dec 2020 - Present}{
+    \vspace{2mm}
+    \textit{\underline{Coursework}: Data Structure \& Algorithms, Database Management Systems, Computer Networks, Operating Systems, Compiler Design, Object-Oriented Programming, Distributed Systems, Software Engineering}
 
-\educationItem{The Scholars' Home}{Paonta Sahib, India}{Higher Secondary (12th)}{Percentage: \textbf{97}}{Apr 2019 - Mar 2020}
-\bulletSep
+}
+% \bulletSep
 
-\educationItem{The Scholars' Home}{Paonta Sahib, India}{Secondary (10th)}{Percentage: \textbf{94.4}}{Apr 2017 - Mar 2018}
+% \educationItem{The Scholars' Home}{Paonta Sahib, India}{Higher Secondary (12th)}{Percentage: \textbf{97}}{Apr 2019 - Mar 2020}
+% \bulletSep
+
+% \educationItem{The Scholars' Home}{Paonta Sahib, India}{Secondary (10th)}{Percentage: \textbf{94.4}}{Apr 2017 - Mar 2018}
 \sectionSep
 
 % ----------- Work Experience -----------
@@ -143,10 +153,14 @@
 \header{Work Experience}
 
 \experienceItem{Cisco}{Bangalore, India}{Software Engineer Intern}{Jan 2024 - Present}{
+    \begin{itemize}
+        \item Contributing to the advancement of \textbf{Cisco's XDR project} using \textbf{React.js and Go}.
+        \item Identified and resolved \textbf{two bugs} within Cisco's internal UI library.
+    \end{itemize}
 }
 \bulletSep
 
-\experienceItem{Scaler}{Bangalore, India (Remote)}{Problem Setter Intern}{Sep 2023 - Dec 2023}{
+\experienceItem{Scaler}{Remote}{Problem Setter Intern}{Sep 2023 - Dec 2023}{
     \begin{itemize}
         \item \textbf{Curated} and \textbf{reviewied} several CP problems for various hiring challenges and the InterviewBit platform.
         \item \textbf{Tested} problems and improved user guides for better problem-solving.
@@ -154,40 +168,40 @@
 }
 \bulletSep
 
-\experienceItem{Coding Ninjas}{Gurugram, India (Remote)}{Technical Content Writer Intern}{Mar 2023 - Jun 2023}{
+\experienceItem{Coding Ninjas}{Remote}{Technical Content Writer Intern}{Mar 2023 - Jun 2023}{
     \begin{itemize}
         \item Created \textbf{high-quality} content covering a wide range of programming languages, frameworks, and tools.
         \item Authored and edited over 30 \textbf{technical blog posts, tutorials}, etc., aimed at helping students learn and improve.
     \end{itemize}
 }
-\sectionSep
+% \bulletSep
 
 % \experienceItem{Coding Shuttle}{Remote}{Problem Setter}{Feb 2023 - Mar 2023}{
 %     \item Generated test cases and optimal solutions for problems based on \textbf{Data Structures and Algorithms}.
 % }
-% \sectionSep
+\sectionSep
 
 % ----------- Skills -----------
 
 \header{Skills}
 % [t] option means top
-\begin{minipage}[t]{0.49\textwidth}
+\begin{minipage}[t]{0.51\textwidth}
     \begin{tabular}{@{}ll}
-        \textbf{Languages} & C, C++, Python, JavaScript \\
-        \textbf{Databases} & MySQL, MongoDB             \\
+        \textbf{Languages} & C, C++, Python, JavaScript, TypeScript, Go \\
+        \textbf{Databases} & MySQL, MongoDB                             \\
         \textbf{Others}    & Bash, Markdown, Latex
     \end{tabular}
     % Column 1
     % , Go, MATLAB
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.39\textwidth}
+\begin{minipage}[t]{0.47\textwidth}
     % Column 2
     % React, 
     \begin{tabular}{@{}ll}
-        \textbf{Frameworks} & NodeJS, ExpressJS, FastAPI \\
-        \textbf{Tools}      & Git, GNU/Linux, Postman    \\
-        \textbf{}           &                            \\
+        \textbf{Frameworks} & ReactJS, NodeJS, ExpressJS, FastAPI \\
+        \textbf{Tools}      & Git, GNU/Linux, Postman, AWS        \\
+        \textbf{}           &                                     \\
     \end{tabular}
 \end{minipage}
 \sectionSep
@@ -206,12 +220,13 @@
     \item Developed a comprehensive paint application with \textbf{user-friendly graphical interface}, allowing users to create digital art effortlessly.
     \item \textbf{Features}: Save as JPEG file, Color Palette, Size options, etc.
 }
-% \bulletSep
+\bulletSep
 
-% \projectItem{Sort Visualizer}{p5.js, CSS3, HTML5}{https://akshataggarwal14.github.io/Sorting-Algorithms/}{https://github.com/AkshatAggarwal14/Sorting-Algorithms/}{
-%     \item Created a web application to visualize various sorting algorithms, helping users understand how they work.
-%     \item Implemented \textbf{Interactive UI} features, including the selection of sorting algorithms and adjustable parameters for visualization size and speed.
-% }
+\projectItem{Sort Visualizer}{p5.js, CSS3, HTML5}{https://akshataggarwal14.github.io/Sorting-Algorithms/}{https://github.com/AkshatAggarwal14/Sorting-Algorithms/}{
+    \item Created a web application to visualize various sorting algorithms, helping users understand how they work.
+    \item Implemented \textbf{Interactive UI} features, including the selection of sorting algorithms and adjustable parameters for visualization size and speed.
+}
+% \bulletSep
 
 % \projectItem{React Wordle}{React, CSS3}{https://wordle-with-react.netlify.app/}{https://github.com/AkshatAggarwal14/react-wordle}{
 %     \item Created a web-based \textbf{word-guessing} game where users can guess a hidden word by entering their guesses.
@@ -222,6 +237,13 @@
 % ----------- Achievements -----------
 
 \header{Achievements}
+
+\image{icpc} \textbf{ICPC} | Recognized as an \textbf{ICPC 2023 Regionalist} as a member of the team\textbf{\link{https://icpc.global/ICPCID/6IIRHHSFPAXF}{Deadlock.}}
+\tinyBulletSep
+
+\image{cisco} \textbf{Cisco} | Selected as one of \textbf{23} finalist teams for\textbf{\link{https://drive.google.com/file/d/1eBcJ4Ax0QHJq6Kb9MObrU1M9dQ7qvvbI/view?usp=sharing}{Code with Cisco}}codathon out of over \textbf{60,000} participants.
+\tinyBulletSep
+
 \image{cc} \textbf{CodeChef} -\textbf{\link{https://www.codechef.com/users/master_mind14}{master\_mind14}}
 \begin{itemize}
     \item Achieved \textbf{6 star} rating with a peak rating of \textbf{2211}.
@@ -239,8 +261,8 @@
 
 \image{lc} \textbf{Leetcode} -\textbf{\link{https://leetcode.com/AkshatAggarwal14/}{AkshatAggarwal14}}
 \begin{itemize}
-    \item Ranked among top \textbf{1.9\%} users on Leetcode with a maximum Rating of \textbf{2079}
-    \item Ranked\textbf{\link{https://clist.by/standings/biweekly-contest-91-38396296/?country=IN}{99th}}globally (5th in India) out of \textbf{18,000+} participants in \textbf{Biweekly Contest 91}.
+    \item Ranked among top \textbf{1.6\%} users on Leetcode with a maximum Rating of \textbf{2112}
+    \item Ranked\textbf{\link{https://clist.by/standings/biweekly-contest-91-38396296/?country=IN}{99th}}globally (5th in India) out of over \textbf{18,000} participants in \textbf{Biweekly Contest 91}.
 \end{itemize}
 \tinyBulletSep
 
@@ -248,36 +270,31 @@
 \image{google} \textbf{Google} | Ranked\textbf{\link{https://drive.google.com/file/d/1cAIdPLOMWYXWl6qaP8iQeVJv8y2TtfIG/view}{318th}}out of \textbf{12,000+} participants in \textbf{Google Kickstart} 2022 Round G.
 \tinyBulletSep
 
-\image{cisco} \textbf{Cisco} | Selected as one of \textbf{23} finalist teams for\textbf{\link{https://drive.google.com/file/d/1eBcJ4Ax0QHJq6Kb9MObrU1M9dQ7qvvbI/view?usp=sharing}{Code with Cisco}}on-site codathon out of \textbf{14,000} participants.
-\tinyBulletSep
+\image{stopstalk} \textbf{StopStalk} | Solved more than\textbf{\link{https://www.stopstalk.com/user/profile/master_mind14}{3000}}programming problems across all coding platforms.
 
-\image{stopstalk} \textbf{StopStalk} | Solved\textbf{\link{https://www.stopstalk.com/user/profile/master_mind14}{3000+}}programming problems across all coding platforms.
-\tinyBulletSep
-
-\image{icpc} \textbf{ICPC} | Recognized as an \textbf{ICPC 2023 Regionalist} as a member of the team\textbf{\link{https://icpc.global/ICPCID/6IIRHHSFPAXF}{Deadlock.}}
 \sectionSep
 
 % ----------- Coursework -----------
-\header{Coursework}
-\begin{minipage}[t]{0.4\textwidth}
-    % Column 1
-    Data Structures \& Algorithms\\
-    Database Management Systems
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.25\textwidth}
-    % Column 2
-    Computer Networks\\
-    Operating Systems
-    % Compiler Design
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.3\textwidth}
-    % Column 3
-    Object Oriented Programming\\
-    Distributed Systems
-\end{minipage}
-\hfill
+% \header{Coursework}
+% \begin{minipage}[t]{0.4\textwidth}
+%     % Column 1
+%     Data Structures \& Algorithms\\
+%     Database Management Systems
+% \end{minipage}
+% \hfill
+% \begin{minipage}[t]{0.25\textwidth}
+%     % Column 2
+%     Computer Networks\\
+%     Operating Systems
+%     % Compiler Design
+% \end{minipage}
+% \hfill
+% \begin{minipage}[t]{0.3\textwidth}
+%     % Column 3
+%     Object Oriented Programming\\
+%     Distributed Systems
+% \end{minipage}
+% \hfill
 % \sectionSep
 
 % ----------- Volunteer Experience -----------
