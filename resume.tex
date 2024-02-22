@@ -96,6 +96,15 @@
     \end{itemize}
 }
 
+\newcommand{\playstoreProjectItem}[4]{
+    {\textbf{#1}} {(\sl #2)}\hfill
+    \linkFont{\href{#3}{Playstore}}\\
+    \vspace{2pt}
+    \begin{itemize}
+        #4
+    \end{itemize}
+}
+
 \newcommand{\image}[1]{
     \begingroup
     \normalfont
@@ -210,11 +219,17 @@
 
 \header{Projects}
 
-\projectItem{RFID Attendance System}{Node.js, React, Express, MongoDB, Arduino}{}{https://github.com/AkshatAggarwal14/RFID-Attendance-system}{
-    \item Developed a highly efficient attendance tracking system by integrating RFID technology, enabling users to register attendance through \textbf{RFID card scanning} and streamlining attendance process.
-    \item Established seamless \textbf{serial communication} between the Arduino board and Node.js.
+\playstoreProjectItem{CardioCare}{Node.js, React, Express, MongoDB, Swagger UI, Flutter}{https://play.google.com/store/apps/details?id=com.cardio.care}{
+    \item Steering backend development for CardioCare, an app designed for doctors at \textbf{IGMC Shimla}, to optimize patient care and medical record management.
+    \item Used \textbf{Swagger UI} to document APIs comprehensively, facilitating smooth collaboration among team members.
 }
 \bulletSep
+
+% \projectItem{RFID Attendance System}{Node.js, React, Express, MongoDB, Arduino}{}{https://github.com/AkshatAggarwal14/RFID-Attendance-system}{
+%     \item Developed a highly efficient attendance tracking system by integrating RFID technology, enabling users to register attendance through \textbf{RFID card scanning} and streamlining attendance process.
+%     \item Established seamless \textbf{serial communication} between the Arduino board and Node.js.
+% }
+% \bulletSep
 
 \projectItem{Paint Application}{C++, WinBGIm Graphics Library}{}{https://github.com/Sahil-187/Paint-Application}{
     \item Developed a comprehensive paint application with \textbf{user-friendly graphical interface}, allowing users to create digital art effortlessly.
