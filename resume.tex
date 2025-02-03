@@ -1,11 +1,10 @@
 \documentclass[a4paper]{article}
 \usepackage{hyperref}
 \usepackage{enumitem}
+\usepackage{tabularx}
 
-\usepackage[left=0.5in,top=0.45in,right=0.5in,bottom=0.45in]{geometry}
-% \usepackage[scale=0.95]{tgschola}
+\usepackage[left=0.5in,top=0.45in,right=0.5in,bottom=0.6in]{geometry}
 \usepackage[T1]{fontenc}
-\usepackage{titlesec}
 \usepackage{xcolor}
 \usepackage{fontawesome}
 \usepackage{graphicx}
@@ -39,7 +38,7 @@
 
 \newcommand{\bulletSep} { \vspace{2.5mm} }
 
-\newcommand{\sectionSep} { \vspace{3.5mm} }
+\newcommand{\sectionSep} { \vspace{3mm} }
 
 \newcommand{\lineunder} {
     \vspace*{-8pt} \\
@@ -75,11 +74,13 @@
 }
 
 \newcommand{\linkFont}[1]{
-    {\fontfamily{lmtt}\selectfont#1}
+    \textbf{#1}
+    % {\fontfamily{lmtt}\selectfont#1}
 }
 
 \newcommand{\link}[2]{
-    {\fontfamily{lmtt}\selectfont\href{#1}{#2}}
+    \href{#1}{\textbf{#2}}
+    % {\fontfamily{lmtt}\selectfont\href{#1}{#2}}
 }
 
 \newcommand{\projectItem}[5]{
@@ -122,8 +123,7 @@
 % ----------- Profile -----------
 
 \begin{center}
-    {\textbf{\Huge \scshape Akshat Aggarwal}} \\ \vspace{1pt}
-    Himachal Pradesh, India \\
+    {\textbf{\Huge \scshape Akshat Aggarwal}} \\ \vspace{4pt}
     \small \textcolor{black}{\raisebox{-0.1\height}\faPhone\
         7876212728} ~ \href{mailto:akshataggarwal1411@gmail.com}{{\raisebox{-0.2\height}\faEnvelope\  \underline{akshataggarwal1411@gmail.com}}} ~
     \href{https://www.linkedin.com/in/akshataggarwal1411/}{{\raisebox{-0.2\height}\faLinkedinSquare\ \underline{linkedin.com/in/akshataggarwal1411}}}  ~
@@ -135,64 +135,52 @@
     % \href{https://www.linkedin.com/in/akshataggarwal1411/}{Linked\faLinkedinSquare~Profile}
 \end{center}
 
-\vspace{-2mm}
+% \vspace{-2mm}
 
 \hypersetup {
     urlcolor     = blue, %Colour for external hyperlinks
 }
-
-% ----------- Education -----------
-
-\header{Education}
-
-\educationItem{National Institute of Technology, Hamirpur}{Hamirpur, India}{Bachelor of Technology, Computer Science \& Enginnering}{CGPA: \textbf{9.66} (Gold medalist)}{Dec 2020 - May 2024}{
-    \tinyBulletSep
-    \textit{\underline{Coursework}: Data Structure \& Algorithms, Database Management Systems, Computer Networks, Operating Systems, Compiler Design, Object-Oriented Programming, Distributed Systems, Software Engineering}
-
-}
-% \bulletSep
-
-% \educationItem{The Scholars' Home}{Paonta Sahib, India}{Higher Secondary (12th)}{Percentage: \textbf{97}}{Apr 2019 - Mar 2020}
-% \bulletSep
-
-% \educationItem{The Scholars' Home}{Paonta Sahib, India}{Secondary (10th)}{Percentage: \textbf{94.4}}{Apr 2017 - Mar 2018}
-\sectionSep
 
 % ----------- Work Experience -----------
 
 \header{Work Experience}
 
 \experienceItem{Intuit}{Bengaluru, India}{Software Engineer 1}{Aug 2024 - Present}{
+    \begin{itemize}
+        \item Contributing to the development of multi-entity aware dimensions for \textbf{Intuit Enterprise Suite}, simplifying financial management for \textbf{mid-market businesses}.
+        \item Enhancing both frontend and backend systems to improve business operations following best design practices.
+        \item Actively engaged in \textbf{multiple projects}, showcasing adaptability and proficiency in diverse technical environments.
+    \end{itemize}
 }
 \bulletSep
 
-% \experienceItem{Salesforce}{Bengaluru, India}{Associate Member of Technical Staff}{Jun 2024 - Aug 2024}{
-%     \begin{itemize}
-%         \item Enhanced the onboarding experience for core engineers in the Industries Cloud by creating better documentation.
-%         \item Helped draft a guide to aid new MuleSoft developers to help them start contributing quickly.
-%     \end{itemize}
-% }
-% \bulletSep
+\experienceItem{Salesforce}{Bengaluru, India}{Associate Member of Technical Staff}{Jun 2024 - Aug 2024}{
+    \begin{itemize}
+        \item Enhanced onboarding experience for core engineers in the Industries Cloud by creating \textbf{better documentation}.
+        \item Helped draft a guide to aid new \textbf{MuleSoft developers} to help them start contributing quickly.
+    \end{itemize}
+}
+\bulletSep
 
-\experienceItem{Cisco}{Bengaluru, India}{Software Engineer Intern}{Jan 2024 - Jun 2024}{
+\experienceItem{Cisco}{Bengaluru, India}{Software Engineer Intern}{Jan 2024 - May 2024}{
     \begin{itemize}
         \item Contributed to the \textbf{Secure Cloud Control (SCC v2)} project in the \textbf{XDR team}.
-        \item Conducted functional and automated testing with \textbf{Jest}, \textbf{Playwright}, and \textbf{Cypress}.
+        \item Conducted functional and automated testing with \textbf{Jest} and \textbf{Playwright} ensuring atleast 90\% code coverage.
         \item Performed client-side performance testing, providing insights by comparing SCC v1 and SCC v2.
         \item Automated PR notifications using Webex APIs and integrated micro-apps with \textbf{Webpack Module Federation}.
         \item Identified and resolved multiple bugs in the internal UI library and other products.
     \end{itemize}
 }
-\bulletSep
 
+% \bulletSep
 % \experienceItem{Scaler}{Remote}{Problem Setter Intern}{Sep 2023 - Dec 2023}{
 %     \begin{itemize}
 %         \item \textbf{Curated} and \textbf{reviewed} several CP problems for various hiring challenges and the InterviewBit platform.
 %         \item \textbf{Tested} problems and improved user guides for better problem-solving.
 %     \end{itemize}
 % }
-% \bulletSep
 
+% \bulletSep
 % \experienceItem{Coding Ninjas}{Remote}{Technical Content Writer Intern}{Mar 2023 - Jun 2023}{
 %     \begin{itemize}
 %         \item Created \textbf{high-quality} content covering a wide range of programming languages, frameworks, and tools.
@@ -207,28 +195,21 @@
 % }
 \sectionSep
 
-% ----------- Skills -----------
+% ----------- Education -----------
 
-\header{Skills}
-% [t] option means top
-\begin{minipage}[t]{0.52\textwidth}
-    \begin{tabular}{@{}ll}
-        \textbf{Languages} & C, C++, Python, JavaScript, TypeScript, Go \\
-        \textbf{Databases} & MySQL, MongoDB                             \\
-        \textbf{Others}    & Bash, Markdown, Latex, Webpack, Swagger
-    \end{tabular}
-    % Column 1
-    % , Go, MATLAB
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.47\textwidth}
-    % Column 2
-    \begin{tabular}{@{}ll}
-        \textbf{Frameworks} & ReactJS, NodeJS, ExpressJS, FastAPI \\
-        \textbf{Tools}      & Git, GNU/Linux, Postman, AWS        \\
-        \textbf{}           &                                     \\
-    \end{tabular}
-\end{minipage}
+\header{Education}
+
+\educationItem{National Institute of Technology, Hamirpur}{Hamirpur, India}{Bachelor of Technology, Computer Science \& Engineering}{CGPA: \textbf{9.66} (Gold medalist)}{Dec 2020 - May 2024}{
+    % \tinyBulletSep
+    % \textit{\underline{Coursework}: Data Structure \& Algorithms, Database Management Systems, Computer Networks, Operating Systems, Compiler Design, Object-Oriented Programming, Distributed Systems, Software Engineering}
+
+}
+% \bulletSep
+
+% \educationItem{The Scholars' Home}{Paonta Sahib, India}{Higher Secondary (12th)}{Percentage: \textbf{97}}{Apr 2019 - Mar 2020}
+% \bulletSep
+
+% \educationItem{The Scholars' Home}{Paonta Sahib, India}{Secondary (10th)}{Percentage: \textbf{94.4}}{Apr 2017 - Mar 2018}
 \sectionSep
 
 % ----------- Projects -----------
@@ -236,8 +217,8 @@
 \header{Projects}
 
 \playstoreProjectItem{Cardiocare}{Node.js, React, Express, MongoDB, Swagger UI, Flutter}{https://play.google.com/store/apps/details?id=com.cardio.care}{
-    \item Steering \textbf{backend development} for Cardiocare, an app designed for doctors at \textbf{IGMC Shimla}, to optimize patient care and medical record management.
-    % \item Used \textbf{Swagger UI} to document APIs comprehensively, facilitating smooth collaboration among team members.
+    \item Led the \textbf{backend development} for Cardiocare, a healthcare application designed for doctors at \textbf{IGMC Shimla}, enhancing patient care and medical record management.
+    \item Designed and documented RESTful APIs using \textbf{Swagger UI}, ensuring seamless collaboration.
 }
 \bulletSep
 
@@ -248,15 +229,15 @@
 % \bulletSep
 
 \projectItem{Paint Application}{C++, WinBGIm Graphics Library}{}{https://github.com/Sahil-187/Paint-Application}{
-    \item Developed a comprehensive paint application with \textbf{user-friendly graphical interface}, allowing users to create digital art effortlessly.
-    \item \textbf{Features}: Save as JPEG file, Color Palette, Size options, etc.
+    \item Built a \textbf{feature-rich paint application} with an intuitive graphical interface for effortless digital art creation.
+    \item Implemented key functionalities, including \textbf{JPEG export, color palette selection, brush size adjustments}, and more.
 }
-\bulletSep
+% \bulletSep
 
-\projectItem{Sort Visualizer}{p5.js, CSS3, HTML5}{https://akshataggarwal14.github.io/Sorting-Algorithms/}{https://github.com/AkshatAggarwal14/Sorting-Algorithms/}{
-    \item Created a web application to visualize various sorting algorithms, helping users understand how they work.
-    \item Implemented \textbf{Interactive UI} features, including the selection of sorting algorithms and adjustable parameters for visualization size and speed.
-}
+% \projectItem{Sort Visualizer}{p5.js, CSS3, HTML5}{https://akshataggarwal14.github.io/Sorting-Algorithms/}{https://github.com/AkshatAggarwal14/Sorting-Algorithms/}{
+%     \item Created a web application to visualize various sorting algorithms, helping users understand how they work.
+%     \item Implemented \textbf{Interactive UI} features, including the selection of sorting algorithms and adjustable parameters for visualization size and speed.
+% }
 % \bulletSep
 
 % \projectItem{React Wordle}{React, CSS3}{https://wordle-with-react.netlify.app/}{https://github.com/AkshatAggarwal14/react-wordle}{
@@ -269,7 +250,7 @@
 
 \header{Achievements}
 
-\image{icpc} \textbf{ICPC} | Achieved recognition as an ICPC 2023 Regionalist with team \textbf{\link{https://icpc.global/ICPCID/6IIRHHSFPAXF}{Deadlock}}, demonstrating exceptional algorithmic problem-solving skills
+\image{icpc} \textbf{ICPC} | Achieved recognition as an International Collegiate Programming Contest (\textbf{ICPC}) 2023 Regionalist with team \textbf{\link{https://icpc.global/ICPCID/6IIRHHSFPAXF}{Deadlock}}, demonstrating exceptional algorithmic problem-solving skills
 \tinyBulletSep
 
 \image{cisco} \textbf{Cisco} | Selected as one of \textbf{23} finalist teams for\textbf{\link{https://drive.google.com/file/d/1eBcJ4Ax0QHJq6Kb9MObrU1M9dQ7qvvbI/view?usp=sharing}{Code with Cisco}}codathon out of over \textbf{60,000} participants.
@@ -277,8 +258,7 @@
 
 \image{cc} \textbf{CodeChef} -\textbf{\link{https://www.codechef.com/users/master_mind14}{master\_mind14}}
 \begin{itemize}
-    \item Achieved \textbf{6 star} rating with a peak rating of \textbf{2211}.
-    \item Ranked among the top \textbf{400} out of \textbf{2,00,000+} Indian users.
+    \item Achieved \textbf{6 star} rating with a peak rating of \textbf{2211}, ranking among the top \textbf{400} out of \textbf{2,00,000+} Indian users.
     \item Ranked\textbf{\link{https://www.codechef.com/rankings/COOK139B?itemsPerPage=100&order=asc&page=1&search=master_mind14&sortBy=rank}{30th}}globally out of \textbf{2900+} participants in \textbf{March Cook-Off 2022 Div-2}.
 \end{itemize}
 \tinyBulletSep
@@ -295,15 +275,14 @@
     \item Ranked among top \textbf{1.6\%} users on Leetcode with a maximum Rating of \textbf{2112}
     \item Ranked\textbf{\link{https://clist.by/standings/biweekly-contest-91-38396296/?country=IN}{99th}}globally (5th in India) out of over \textbf{18,000} participants in \textbf{Biweekly Contest 91}.
 \end{itemize}
-\tinyBulletSep
 
+% \tinyBulletSep
 % https://clist.by/standings/kick-start-round-g-31261744/?find_me=45689030
-\image{google} \textbf{Google} | Ranked\textbf{\link{https://drive.google.com/file/d/1cAIdPLOMWYXWl6qaP8iQeVJv8y2TtfIG/view}{318th}}out of \textbf{12,000+} participants in \textbf{Google Kickstart} 2022 Round G.
-\tinyBulletSep
+% \image{google} \textbf{Google} | Ranked\textbf{\link{https://drive.google.com/file/d/1cAIdPLOMWYXWl6qaP8iQeVJv8y2TtfIG/view}{318th}}out of \textbf{12,000+} participants in \textbf{Google Kickstart} 2022 Round G.
 
-\image{stopstalk} \textbf{StopStalk} | Solved more than\textbf{\link{https://www.stopstalk.com/user/profile/master_mind14}{3000}}programming problems across all coding platforms.
-
-\sectionSep
+% \tinyBulletSep
+% \image{stopstalk} \textbf{StopStalk} | Solved more than\textbf{\link{https://www.stopstalk.com/user/profile/master_mind14}{3000}}programming problems across all coding platforms.
+% \sectionSep
 
 % ----------- Coursework -----------
 % \header{Coursework}
@@ -342,4 +321,16 @@
 %     \item Conducted numerous programming contests and organized workshops (100+ attendees each).
 % }
 
+
+\sectionSep
+% ----------- Skills -----------
+
+\header{Skills}
+\begin{tabularx}{\textwidth}{X l}
+    \textbf{Languages}  & C, C++, Python, JavaScript, TypeScript, Go, Java, GraphQL \\
+    \textbf{Databases}  & MySQL, MongoDB, PostgreSQL                                \\
+    \textbf{Frameworks} & ReactJS, NodeJS, ExpressJS, FastAPI, Spring Boot          \\
+    \textbf{Tools}      & Git, GNU/Linux, Postman, AWS                              \\
+    \textbf{Others}     & Bash, Markdown, LaTeX, Webpack, Swagger                   \\
+\end{tabularx}
 \end{document}
