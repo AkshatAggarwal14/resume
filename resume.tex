@@ -1,11 +1,10 @@
 \documentclass[a4paper]{article}
 \usepackage{hyperref}
 \usepackage{enumitem}
+\usepackage{tabularx}
 
-\usepackage[left=0.5in,top=0.45in,right=0.5in,bottom=0.45in]{geometry}
-% \usepackage[scale=0.95]{tgschola}
+\usepackage[left=0.5in,top=0.45in,right=0.5in,bottom=0.6in]{geometry}
 \usepackage[T1]{fontenc}
-\usepackage{titlesec}
 \usepackage{xcolor}
 \usepackage{fontawesome}
 \usepackage{graphicx}
@@ -35,9 +34,9 @@
 
 \renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\tinyBulletSep} { \vspace{2.5mm} }
+\newcommand{\tinyBulletSep} { \vspace{2mm} }
 
-\newcommand{\bulletSep} { \vspace{3mm} }
+\newcommand{\bulletSep} { \vspace{2.5mm} }
 
 \newcommand{\sectionSep} { \vspace{3.5mm} }
 
@@ -47,7 +46,7 @@
 }
 
 \newcommand{\header} [1] {
-    {\hspace*{-18pt}\vspace*{6pt} {
+    {\hspace*{-18pt}\vspace*{5pt} {
         \fontfamily{qcs}\selectfont \large \scshape #1
     }}
     \vspace*{-6pt} \lineunder
@@ -124,8 +123,8 @@
 % ----------- Profile -----------
 
 \begin{center}
-    {\textbf{\Huge \scshape Akshat Aggarwal}} \\ \vspace{5pt}
-    \small \textcolor{black}{\raisebox{-0.1\height}\faPhone\
+    {\textbf{\Huge \scshape Akshat Aggarwal}} \\ \vspace{4pt}
+    \small \textcolor{black}{\faPhone\
         \href{tel:+917876212728}{7876212728}} ~ \href{mailto:akshataggarwal1411@gmail.com}{{\raisebox{-0.2\height}\faEnvelope\  \underline{akshataggarwal1411@gmail.com}}} ~
     \href{https://www.linkedin.com/in/akshataggarwal1411/}{{\raisebox{-0.2\height}\faLinkedinSquare\ \underline{linkedin.com/in/akshataggarwal1411}}}  ~
     \href{https://github.com/AkshatAggarwal14}{{\raisebox{-0.2\height}\faGithub\ \underline{github.com/AkshatAggarwal14}}}
@@ -148,7 +147,7 @@
 
 \experienceItem{Intuit}{Bengaluru, India}{Software Engineer 1}{Aug 2024 - Present}{
     \begin{itemize}
-        \item Contributing to the development of multi-entity aware dimensions for \textbf{Intuit Enterprise Suite} (IES), simplifying financial management for \textbf{mid-market businesses}.
+        \item Contributing to the development of multi-entity aware dimensions for \textbf{Intuit Enterprise Suite}, simplifying financial management for \textbf{mid-market businesses}.
         \item Enhancing both frontend and backend systems to improve business operations following best design practices.
         \item Actively engaged in \textbf{multiple projects}, showcasing adaptability and proficiency in diverse technical environments.
     \end{itemize}
@@ -200,7 +199,7 @@
 
 \header{Education}
 
-\educationItem{National Institute of Technology, Hamirpur}{Hamirpur, India}{Bachelor of Technology, Computer Science \& Enginnering}{CGPA: \textbf{9.66} (Gold medalist)}{Dec 2020 - May 2024}{
+\educationItem{National Institute of Technology, Hamirpur}{Hamirpur, India}{Bachelor of Technology, Computer Science \& Engineering}{CGPA: \textbf{9.66} (Gold medalist)}{Dec 2020 - May 2024}{
     % \tinyBulletSep
     % \textit{\underline{Coursework}: Data Structure \& Algorithms, Database Management Systems, Computer Networks, Operating Systems, Compiler Design, Object-Oriented Programming, Distributed Systems, Software Engineering}
 
@@ -213,37 +212,13 @@
 % \educationItem{The Scholars' Home}{Paonta Sahib, India}{Secondary (10th)}{Percentage: \textbf{94.4}}{Apr 2017 - Mar 2018}
 \sectionSep
 
-% ----------- Skills -----------
-
-\header{Skills}
-% [t] option means top
-\begin{minipage}[t]{0.52\textwidth}
-    \begin{tabular}{@{}ll}
-        \textbf{Languages} & C, C++, Python, JavaScript, TypeScript, Go \\
-        \textbf{Databases} & MySQL, MongoDB                             \\
-        \textbf{Others}    & Bash, Markdown, Latex, Webpack, Swagger
-    \end{tabular}
-    % Column 1
-    % , Go, MATLAB
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.47\textwidth}
-    % Column 2
-    \begin{tabular}{@{}ll}
-        \textbf{Frameworks} & ReactJS, NodeJS, ExpressJS, FastAPI \\
-        \textbf{Tools}      & Git, GNU/Linux, Postman, AWS        \\
-        \textbf{}           &                                     \\
-    \end{tabular}
-\end{minipage}
-\sectionSep
-
 % ----------- Projects -----------
 
 \header{Projects}
 
 \playstoreProjectItem{Cardiocare}{Node.js, React, Express, MongoDB, Swagger UI, Flutter}{https://play.google.com/store/apps/details?id=com.cardio.care}{
-    \item Led \textbf{backend development} for Cardiocare, an app designed for doctors at \textbf{IGMC Shimla}, to optimize patient care and medical record management.
-    \item Used \textbf{Swagger UI} to document APIs comprehensively, facilitating smooth collaboration among team members.
+    \item Led the \textbf{backend development} for Cardiocare, a healthcare application designed for doctors at \textbf{IGMC Shimla}, enhancing patient care and medical record management.
+    \item Designed and documented RESTful APIs using \textbf{Swagger UI}, ensuring seamless collaboration.
 }
 \bulletSep
 
@@ -254,8 +229,8 @@
 % \bulletSep
 
 \projectItem{Paint Application}{C++, WinBGIm Graphics Library}{}{https://github.com/Sahil-187/Paint-Application}{
-    \item Developed a comprehensive paint application with \textbf{user-friendly graphical interface}, allowing users to create digital art effortlessly.
-    \item \textbf{Features}: Save as JPEG file, Color Palette, Size options, etc.
+    \item Built a \textbf{feature-rich paint application} with an intuitive graphical interface for effortless digital art creation.
+    \item Implemented key functionalities, including \textbf{JPEG export, color palette selection, brush size adjustments}, and more.
 }
 % \bulletSep
 
@@ -283,8 +258,7 @@
 
 \image{cc} \textbf{CodeChef} -\textbf{\link{https://www.codechef.com/users/master_mind14}{master\_mind14}}
 \begin{itemize}
-    \item Achieved \textbf{6 star} rating with a peak rating of \textbf{2211}.
-    \item Ranked among the top \textbf{400} out of \textbf{2,00,000+} Indian users.
+    \item Achieved \textbf{6 star} rating with a peak rating of \textbf{2211}, ranking among the top \textbf{400} out of \textbf{2,00,000+} Indian users.
     \item Ranked\textbf{\link{https://www.codechef.com/rankings/COOK139B?itemsPerPage=100&order=asc&page=1&search=master_mind14&sortBy=rank}{30th}}globally out of \textbf{2900+} participants in \textbf{March Cook-Off 2022 Div-2}.
 \end{itemize}
 \tinyBulletSep
@@ -347,4 +321,16 @@
 %     \item Conducted numerous programming contests and organized workshops (100+ attendees each).
 % }
 
+
+\sectionSep
+% ----------- Skills -----------
+
+\header{Skills}
+\begin{tabularx}{\textwidth}{X l}
+    \textbf{Languages}  & C, C++, Python, JavaScript, TypeScript, Go, Java, GraphQL \\
+    \textbf{Databases}  & MySQL, MongoDB, PostgreSQL                                \\
+    \textbf{Frameworks} & ReactJS, NodeJS, ExpressJS, FastAPI, Spring Boot          \\
+    \textbf{Tools}      & Git, GNU/Linux, Postman, AWS                              \\
+    \textbf{Others}     & Bash, Markdown, LaTeX, Webpack, Swagger                   \\
+\end{tabularx}
 \end{document}
