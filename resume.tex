@@ -3,7 +3,7 @@
 \usepackage{enumitem}
 \usepackage{tabularx}
 
-\usepackage[left=0.5in,top=0.45in,right=0.5in,bottom=0.6in]{geometry}
+\usepackage[left=0.55in,top=0.65in,right=0.55in,bottom=0.65in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{xcolor}
 \usepackage{fontawesome}
@@ -34,11 +34,13 @@
 
 \renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\tinyBulletSep} { \vspace{2mm} }
+\newcommand{\tiniestBulletSep} { \vspace{1mm} }
 
-\newcommand{\bulletSep} { \vspace{2.5mm} }
+\newcommand{\tinyBulletSep} { \vspace{2.5mm} }
 
-\newcommand{\sectionSep} { \vspace{3mm} }
+\newcommand{\bulletSep} { \vspace{3mm} }
+
+\newcommand{\sectionSep} { \vspace{5mm} }
 
 \newcommand{\lineunder} {
     \vspace*{-8pt} \\
@@ -60,10 +62,21 @@
     #6
 }
 
-\newcommand{\experienceItem}[5]{
+\newcommand{\experienceCompany}[2]{
     \textbf{#1} \hfill #2 \\
-    \textit{#3} \hfill #4 \\
-    #5
+}
+
+\newcommand{\experienceRole}[3]{
+    \textit{#1} \hfill #2 \\
+    \ifx&#3&%
+    % #3 is empty
+    \else
+    % #3 is nonempty
+    \begin{itemize}
+        #3
+    \end{itemize}
+    \fi
+    \vspace{1mm}
 }
 
 \newcommand{\volunteerItem}[5]{
@@ -135,7 +148,7 @@
     % \href{https://www.linkedin.com/in/akshataggarwal1411/}{Linked\faLinkedinSquare~Profile}
 \end{center}
 
-% \vspace{-2mm}
+\vspace{2mm}
 
 \hypersetup {
     urlcolor     = blue, %Colour for external hyperlinks
@@ -145,31 +158,37 @@
 
 \header{Work Experience}
 
-\experienceItem{Intuit}{Bengaluru, India}{Software Engineer 1}{Aug 2024 - Present}{
-    \begin{itemize}
-        \item Contributing to the development of multi-entity aware dimensions for \textbf{Intuit Enterprise Suite}, simplifying financial management for \textbf{mid-market businesses}.
-        \item Enhancing both frontend and backend systems to improve business operations following best design practices.
-        \item Actively engaged in \textbf{multiple projects}, showcasing adaptability and proficiency in diverse technical environments.
-    \end{itemize}
+\experienceCompany{Intuit}{Bengaluru, India}
+\experienceRole{Software Engineer 2}{Jan 2026 - Present}{
+    \item Designing and developing custom object capabilities for Intuit's Enterprise Suite.
+}
+\tiniestBulletSep
+
+\experienceRole{Software Engineer 1}{Aug 2024 - Jan 2026}{
+    \item Engineered multi-entity \textbf{Dimensions capability} using \textbf{React, TypeScript, GraphQL, and backend services}, supporting complex mid-market accounting workflows at scale.
+    \item Implemented end-to-end \textbf{Role-Based Access Control (RBAC) / AuthZ} across UI and APIs using LDAP-backed roles, securing sensitive financial data and admin operations.
+    \item Built \textbf{bulk dimension assignment workflows} for transaction line items, resulting in a \textbf{7$\times$ increase in user engagement} and reduced manual bookkeeping effort.
+    \item Integrated \textbf{AI/ML-powered recommendations} into transaction forms with optimized API triggering, improving form performance and user efficiency.
+    \item Diagnosed and resolved a \textbf{production performance bottleneck} by identifying missing DB indexes and validating fixes through scale testing before release.
+    \item Improved engineering velocity by \textbf{reducing UI test runtime by 75\%} and introducing repeatable \textbf{Gatling load testing} practices for backend services.
+    \item Contributed reusable platform components in shared frameworks, improving extensibility for multiple product teams.
 }
 \bulletSep
 
-\experienceItem{Salesforce}{Bengaluru, India}{Associate Member of Technical Staff}{Jun 2024 - Aug 2024}{
-    \begin{itemize}
-        \item Enhanced onboarding experience for core engineers in the Industries Cloud by creating \textbf{better documentation}.
-        \item Helped draft a guide to aid new \textbf{MuleSoft developers} to help them start contributing quickly.
-    \end{itemize}
+\experienceCompany{Salesforce}{Bengaluru, India}
+\experienceRole{Associate Member of Technical Staff}{Jun 2024 - Aug 2024}{
+    \item Enhanced onboarding experience for core engineers in the Industries Cloud by creating \textbf{better documentation}.
+    \item Helped draft a guide to aid new \textbf{MuleSoft developers} to help them start contributing quickly.
 }
 \bulletSep
 
-\experienceItem{Cisco}{Bengaluru, India}{Software Engineer Intern}{Jan 2024 - May 2024}{
-    \begin{itemize}
-        \item Contributed to the \textbf{Secure Cloud Control (SCC v2)} project in the \textbf{XDR team}.
-        \item Conducted functional and automated testing with \textbf{Jest} and \textbf{Playwright} ensuring atleast 90\% code coverage.
-        \item Performed client-side performance testing, providing insights by comparing SCC v1 and SCC v2.
-        \item Automated PR notifications using Webex APIs and integrated micro-apps with \textbf{Webpack Module Federation}.
-        \item Identified and resolved multiple bugs in the internal UI library and other products.
-    \end{itemize}
+\experienceCompany{Cisco}{Bengaluru, India}
+\experienceRole{Software Engineer Intern}{Jan 2024 - May 2024}{
+    \item Contributed to the \textbf{Secure Cloud Control (SCC v2)} project in the \textbf{XDR team}.
+    \item Conducted functional and automated testing with \textbf{Jest} and \textbf{Playwright} ensuring atleast 90\% code coverage.
+    \item Performed client-side performance testing, providing insights by comparing SCC v1 and SCC v2.
+    \item Automated PR notifications using Webex APIs and integrated micro-apps with \textbf{Webpack Module Federation}.
+    \item Identified and resolved multiple bugs in the internal UI library and other products.
 }
 
 % \bulletSep
@@ -216,17 +235,18 @@
 
 \header{Projects}
 
-\playstoreProjectItem{Cardiocare}{Node.js, React, Express, MongoDB, Swagger UI, Flutter}{https://play.google.com/store/apps/details?id=com.cardio.care}{
+\projectItem{Cardiocare}{Node.js, React, Express, MongoDB, Swagger UI, Flutter}{}{https://github.com/CardioCare-NITH?tab=repositories}{
     \item Led the \textbf{backend development} for Cardiocare, a healthcare application designed for doctors at \textbf{IGMC Shimla}, enhancing patient care and medical record management.
     \item Designed and documented RESTful APIs using \textbf{Swagger UI}, ensuring seamless collaboration.
+    \item Integrated with \textbf{Firebase} for authentication and real-time database.
 }
 \bulletSep
 
-% \projectItem{RFID Attendance System}{Node.js, React, Express, MongoDB, Arduino}{}{https://github.com/AkshatAggarwal14/RFID-Attendance-system}{
-%     \item Developed a highly efficient attendance tracking system by integrating RFID technology, enabling users to register attendance through \textbf{RFID card scanning} and streamlining attendance process.
-%     \item Established seamless \textbf{serial communication} between the Arduino board and Node.js.
-% }
-% \bulletSep
+\projectItem{RFID Attendance System}{Node.js, React, Express, MongoDB, Arduino}{}{https://github.com/AkshatAggarwal14/RFID-Attendance-system}{
+    \item Developed a highly efficient attendance tracking system by integrating RFID technology, enabling users to register attendance through \textbf{RFID card scanning} and streamlining attendance process.
+    \item Established seamless \textbf{serial communication} between the Arduino board and Node.js.
+}
+\bulletSep
 
 \projectItem{Paint Application}{C++, WinBGIm Graphics Library}{}{https://github.com/Sahil-187/Paint-Application}{
     \item Built a \textbf{feature-rich paint application} with an intuitive graphical interface for effortless digital art creation.
@@ -327,10 +347,10 @@
 
 \header{Skills}
 \begin{tabularx}{\textwidth}{X l}
-    \textbf{Languages}  & C, C++, Python, JavaScript, TypeScript, Go, Java, GraphQL \\
-    \textbf{Databases}  & MySQL, MongoDB, PostgreSQL                                \\
-    \textbf{Frameworks} & ReactJS, NodeJS, ExpressJS, FastAPI, Spring Boot          \\
-    \textbf{Tools}      & Git, GNU/Linux, Postman, AWS                              \\
-    \textbf{Others}     & Bash, Markdown, LaTeX, Webpack, Swagger                   \\
+    \textbf{Languages}  & C, C++, Python, Kotlin, TypeScript, Go, Java, GraphQL \\
+    \textbf{Databases}  & MySQL, MongoDB, PostgreSQL                            \\
+    \textbf{Frameworks} & ReactJS, NodeJS, ExpressJS, FastAPI, Spring Boot      \\
+    \textbf{Tools}      & Git, GNU/Linux, Postman, AWS                          \\
+    \textbf{Others}     & Bash, Markdown, LaTeX, Webpack, Swagger               \\
 \end{tabularx}
 \end{document}
