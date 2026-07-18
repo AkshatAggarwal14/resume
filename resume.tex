@@ -3,7 +3,7 @@
 \usepackage{enumitem}
 \usepackage{tabularx}
 
-\usepackage[left=0.55in,top=0.65in,right=0.55in,bottom=0.65in]{geometry}
+\usepackage[left=0.55in,top=0.55in,right=0.55in,bottom=0.55in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{xcolor}
 \usepackage{fontawesome}
@@ -34,13 +34,13 @@
 
 \renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\tiniestBulletSep} { \vspace{1mm} }
+\newcommand{\tiniestBulletSep} { \vspace{0.5mm} }
 
 \newcommand{\tinyBulletSep} { \vspace{2.5mm} }
 
-\newcommand{\bulletSep} { \vspace{3mm} }
+\newcommand{\bulletSep} { \vspace{1.5mm} }
 
-\newcommand{\sectionSep} { \vspace{5mm} }
+\newcommand{\sectionSep} { \vspace{4.5mm} }
 
 \newcommand{\lineunder} {
     \vspace*{-8pt} \\
@@ -58,7 +58,7 @@
 \newcommand{\educationItem}[6]{
     \textbf{#1}\hfill #2\\
     #3 \hfill #5\\
-    \textit{#4}\\
+    #4\\
     #6
 }
 
@@ -76,7 +76,7 @@
         #3
     \end{itemize}
     \fi
-    \vspace{1mm}
+    \vspace{0.75mm}
 }
 
 \newcommand{\volunteerItem}[5]{
@@ -148,7 +148,7 @@
     % \href{https://www.linkedin.com/in/akshataggarwal1411/}{Linked\faLinkedinSquare~Profile}
 \end{center}
 
-\vspace{2mm}
+\vspace{0.5mm}
 
 \hypersetup {
     urlcolor     = blue, %Colour for external hyperlinks
@@ -159,35 +159,33 @@
 \header{Work Experience}
 
 \experienceCompany{Intuit}{Bengaluru, India}
-\experienceRole{Software Engineer 2}{Jan 2026 - Present}{
-    \item Designing and developing custom object capabilities for Intuit's Enterprise Suite.
+\experienceRole{Software Engineer 2}{Feb 2026 - Present}{
+    \item Built an \textbf{AI-assisted workflow} for reviewing, editing, and bulk-applying accounting-dimension recommendations, combining centralized \textbf{React} state management with \textbf{Kafka} consumers and outbox events.
+    \item Engineered an event-driven \textbf{data pipeline} that ingests third-party data, provisions analytics infrastructure from schema events, and surfaces customer KPIs across \textbf{multiple domains}; reduced application onboarding from \textbf{months to weeks}.
+    \item Co-led Intuit's \textbf{first dynamic RBAC} implementation, enabling user-created custom objects to self-register as authorization resources with custom, per-object \textbf{CRUD permissions}.
+    \item Spearheaded a system that automatically manages multi-entity dimension lifecycle changes, processing \textbf{$\sim$4,500 companies/month} and reducing Jira support toil by \textbf{$\sim$90\%} (from $\sim$50 to 4--5 tickets/month).
 }
 \tiniestBulletSep
 
 \experienceRole{Software Engineer 1}{Aug 2024 - Jan 2026}{
-    \item Engineered multi-entity \textbf{Dimensions capability} using \textbf{React, TypeScript, GraphQL, and backend services}, supporting complex mid-market accounting workflows at scale.
-    \item Implemented end-to-end \textbf{Role-Based Access Control (RBAC) / AuthZ} across UI and APIs using LDAP-backed roles, securing sensitive financial data and admin operations.
-    \item Built \textbf{bulk dimension assignment workflows} for transaction line items, resulting in a \textbf{7$\times$ increase in user engagement} and reduced manual bookkeeping effort.
-    \item Integrated \textbf{AI/ML-powered recommendations} into transaction forms with optimized API triggering, improving form performance and user efficiency.
-    \item Diagnosed and resolved a \textbf{production performance bottleneck} by identifying missing DB indexes and validating fixes through scale testing before release.
-    \item Improved engineering velocity by \textbf{reducing UI test runtime by 75\%} and introducing repeatable \textbf{Gatling load testing} practices for backend services.
-    \item Contributed reusable platform components in shared frameworks, improving extensibility for multiple product teams.
+    \item Built multi-entity financial-dimension capabilities across \textbf{React, GraphQL, and backend services}, enabling consolidated businesses to manage shared dimensions across companies.
+    \item Co-led bulk application of financial dimensions across transaction line items, reducing repetitive bookkeeping and driving a \textbf{7$\times$ increase in feature engagement}.
+    \item Launched \textbf{AI-powered dimension recommendations} for transaction forms, increasing consistent categorization; recommendations drove \textbf{33\%} of dimension interactions after launch.
+    \item Launched a secure self-service SQL platform with scoped authorization, read-only database access, query validation, audit logging, and guardrails, accelerating production data-fix verification.
 }
 \bulletSep
 
 \experienceCompany{Salesforce}{Bengaluru, India}
 \experienceRole{Associate Member of Technical Staff}{Jun 2024 - Aug 2024}{
-    \item Enhanced onboarding experience for core engineers in the Industries Cloud by creating \textbf{better documentation}.
-    \item Helped draft a guide to aid new \textbf{MuleSoft developers} to help them start contributing quickly.
+    \item Created core-engineer onboarding documentation and contributed to a \textbf{MuleSoft} developer guide, accelerating new contributors to Industries Cloud.
 }
 \bulletSep
 
 \experienceCompany{Cisco}{Bengaluru, India}
 \experienceRole{Software Engineer Intern}{Jan 2024 - May 2024}{
     \item Contributed to the \textbf{Secure Cloud Control (SCC v2)} project in the \textbf{XDR team}.
-    \item Conducted functional and automated testing with \textbf{Jest} and \textbf{Playwright} ensuring atleast 90\% code coverage.
-    \item Performed client-side performance testing, providing insights by comparing SCC v1 and SCC v2.
-    \item Automated PR notifications using Webex APIs and integrated micro-apps with \textbf{Webpack Module Federation}.
+    \item Conducted functional, automated, and client-side performance testing with \textbf{Jest} and \textbf{Playwright}, comparing SCC v1/v2 while maintaining at least 90\% code coverage.
+    \item Automated PR notifications via Webex APIs; integrated micro-apps with \textbf{Webpack Module Federation}.
     \item Identified and resolved multiple bugs in the internal UI library and other products.
 }
 
@@ -218,7 +216,7 @@
 
 \header{Education}
 
-\educationItem{National Institute of Technology, Hamirpur}{Hamirpur, India}{Bachelor of Technology, Computer Science \& Engineering}{CGPA: \textbf{9.66} (Gold medalist)}{Dec 2020 - May 2024}{
+\educationItem{National Institute of Technology, Hamirpur}{Hamirpur, India}{Bachelor of Technology, Computer Science \& Engineering}{CGPA: 9.66/10 (\textbf{Gold Medalist})}{Dec 2020 - May 2024}{
     % \tinyBulletSep
     % \textit{\underline{Coursework}: Data Structure \& Algorithms, Database Management Systems, Computer Networks, Operating Systems, Compiler Design, Object-Oriented Programming, Distributed Systems, Software Engineering}
 
@@ -233,25 +231,25 @@
 
 % ----------- Projects -----------
 
-\header{Projects}
+% \header{Projects}
 
-\projectItem{Cardiocare}{Node.js, React, Express, MongoDB, Swagger UI, Flutter}{}{https://github.com/CardioCare-NITH?tab=repositories}{
-    \item Led the \textbf{backend development} for Cardiocare, a healthcare application designed for doctors at \textbf{IGMC Shimla}, enhancing patient care and medical record management.
-    \item Designed and documented RESTful APIs using \textbf{Swagger UI}, ensuring seamless collaboration.
-    \item Integrated with \textbf{Firebase} for authentication and real-time database.
-}
-\bulletSep
+% \projectItem{Cardiocare}{Node.js, React, Express, MongoDB, Swagger UI, Flutter}{}{https://github.com/CardioCare-NITH?tab=repositories}{
+%     \item Led the \textbf{backend development} for Cardiocare, a healthcare application designed for doctors at \textbf{IGMC Shimla}, enhancing patient care and medical record management.
+%     \item Designed and documented RESTful APIs using \textbf{Swagger UI}, ensuring seamless collaboration.
+%     % \item Integrated with \textbf{Firebase} for authentication and real-time database.
+% }
+% \bulletSep
 
-\projectItem{RFID Attendance System}{Node.js, React, Express, MongoDB, Arduino}{}{https://github.com/AkshatAggarwal14/RFID-Attendance-system}{
-    \item Developed a highly efficient attendance tracking system by integrating RFID technology, enabling users to register attendance through \textbf{RFID card scanning} and streamlining attendance process.
-    \item Established seamless \textbf{serial communication} between the Arduino board and Node.js.
-}
-\bulletSep
+% % \projectItem{RFID Attendance System}{Node.js, React, Express, MongoDB, Arduino}{}{https://github.com/AkshatAggarwal14/RFID-Attendance-system}{
+% %     \item Developed a highly efficient attendance tracking system by integrating RFID technology, enabling users to register attendance through \textbf{RFID card scanning} and streamlining attendance process.
+% %     \item Established seamless \textbf{serial communication} between the Arduino board and Node.js.
+% % }
+% \bulletSep
 
-\projectItem{Paint Application}{C++, WinBGIm Graphics Library}{}{https://github.com/Sahil-187/Paint-Application}{
-    \item Built a \textbf{feature-rich paint application} with an intuitive graphical interface for effortless digital art creation.
-    \item Implemented key functionalities, including \textbf{JPEG export, color palette selection, brush size adjustments}, and more.
-}
+% \projectItem{Paint Application}{C++, WinBGIm Graphics Library}{}{https://github.com/Sahil-187/Paint-Application}{
+%     \item Built a \textbf{feature-rich paint application} with an intuitive graphical interface for effortless digital art creation.
+%     \item Implemented key functionalities, including \textbf{JPEG export, color palette selection, brush size adjustments}, and more.
+% }
 % \bulletSep
 
 % \projectItem{Sort Visualizer}{p5.js, CSS3, HTML5}{https://akshataggarwal14.github.io/Sorting-Algorithms/}{https://github.com/AkshatAggarwal14/Sorting-Algorithms/}{
@@ -264,7 +262,7 @@
 %     \item Created a web-based \textbf{word-guessing} game where users can guess a hidden word by entering their guesses.
 %     \item Implemented animations and media queries to enhance the user experience.
 % }
-\sectionSep
+% \sectionSep
 
 % ----------- Achievements -----------
 
@@ -276,24 +274,11 @@
 \image{cisco} \textbf{Cisco} | Selected as one of \textbf{23} finalist teams for\textbf{\link{https://drive.google.com/file/d/1eBcJ4Ax0QHJq6Kb9MObrU1M9dQ7qvvbI/view?usp=sharing}{Code with Cisco}}codathon out of over \textbf{60,000} participants.
 \tinyBulletSep
 
-\image{cc} \textbf{CodeChef} -\textbf{\link{https://www.codechef.com/users/master_mind14}{master\_mind14}}
-\begin{itemize}
-    \item Achieved \textbf{6 star} rating with a peak rating of \textbf{2211}, ranking among the top \textbf{400} out of \textbf{2,00,000+} Indian users.
-    \item Ranked\textbf{\link{https://www.codechef.com/rankings/COOK139B?itemsPerPage=100&order=asc&page=1&search=master_mind14&sortBy=rank}{30th}}globally out of \textbf{2900+} participants in \textbf{March Cook-Off 2022 Div-2}.
-\end{itemize}
-\tinyBulletSep
-
-\image{cf} \textbf{Codeforces} -\textbf{\link{https://codeforces.com/profile/master._.mind}{master.\_.mind}}
-\begin{itemize}
-    \item Achieved the title of \textbf{Expert} with a peak rating of \textbf{1671}.
-    \item Ranked\textbf{\link{https://codeforces.com/contest/1729/standings/participant/140098304\#p140098304}{143rd}}globally (39th in India) out of \textbf{18,000+} participants in \textbf{Codeforces Round 820}.
-\end{itemize}
-\tinyBulletSep
-
-\image{lc} \textbf{Leetcode} -\textbf{\link{https://leetcode.com/AkshatAggarwal14/}{AkshatAggarwal14}}
-\begin{itemize}
-    \item Ranked among top \textbf{1.6\%} users on Leetcode with a maximum Rating of \textbf{2112}
-    \item Ranked\textbf{\link{https://clist.by/standings/biweekly-contest-91-38396296/?country=IN}{99th}}globally (5th in India) out of over \textbf{18,000} participants in \textbf{Biweekly Contest 91}.
+\image{cf} \textbf{Competitive Programming}
+\begin{itemize}[itemsep=1mm]
+    \item \textbf{\link{https://www.codechef.com/users/master_mind14}{CodeChef}:} \textbf{6-star} (peak 2211); top \textbf{400} of \textbf{200K+} Indian users; \textbf{\link{https://www.codechef.com/rankings/COOK139B?itemsPerPage=100&order=asc&page=1&search=master_mind14&sortBy=rank}{30th/2.9K+}} in Cook-Off 2022 Div-2.
+    \item \textbf{\link{https://codeforces.com/profile/master._.mind}{Codeforces}:} \textbf{Expert} (peak 1671); \textbf{\link{https://codeforces.com/contest/1729/standings/participant/140098304\#p140098304}{143rd/18K+}} globally (39th India) in Round 820.
+    \item \textbf{\link{https://leetcode.com/AkshatAggarwal14/}{LeetCode}:} Peak rating \textbf{2112}, ranking among the top \textbf{1.6\%} of users.
 \end{itemize}
 
 % \tinyBulletSep
@@ -346,11 +331,13 @@
 % ----------- Skills -----------
 
 \header{Skills}
-\begin{tabularx}{\textwidth}{X l}
-    \textbf{Languages}  & C, C++, Python, Kotlin, TypeScript, Go, Java, GraphQL \\
-    \textbf{Databases}  & MySQL, MongoDB, PostgreSQL                            \\
-    \textbf{Frameworks} & ReactJS, NodeJS, ExpressJS, FastAPI, Spring Boot      \\
-    \textbf{Tools}      & Git, GNU/Linux, Postman, AWS                          \\
-    \textbf{Others}     & Bash, Markdown, LaTeX, Webpack, Swagger               \\
+{\renewcommand{\arraystretch}{1.18}
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+    \textbf{Languages}  & TypeScript, Java, Kotlin, Python, SQL, GraphQL, C/C++ \\
+    \textbf{Databases}  & MySQL, PostgreSQL, MongoDB, Redis \\
+    \textbf{Frameworks} & React, Spring Boot, Node.js, Express, FastAPI \\
+    \textbf{Tools}      & AWS, Kafka, Docker, Kubernetes, Gatling, Playwright, Git \\
+    \textbf{Core}       & Data Structures \& Algorithms, DBMS, Operating Systems, Computer Networks, Distributed Systems \\
 \end{tabularx}
+}
 \end{document}
