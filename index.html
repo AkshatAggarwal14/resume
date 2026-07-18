@@ -75,17 +75,78 @@
             outline-offset: 2px;
         }
 
+        .resume-preview {
+            min-height: 0;
+            overflow: auto;
+            background: #e8e8e8;
+        }
+
         .resume-viewer {
+            display: block;
             width: 100%;
             height: 100%;
-            min-height: 0;
+            min-height: calc(100vh - 5.5rem);
             border: 0;
+        }
+
+        .resume-image-link {
+            display: none;
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 52rem;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .resume-image {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 0.25rem;
+            box-shadow: 0 0.25rem 1rem rgb(0 0 0 / 0.12);
+            background: #fff;
         }
 
         @media (max-width: 640px) {
             .resume-header {
                 align-items: flex-start;
                 flex-direction: column;
+            }
+
+            /* Mobile browsers often cannot render PDFs inside iframes. */
+            .resume-viewer {
+                display: none;
+            }
+
+            .resume-image-link {
+                display: block;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .resume-preview {
+                background: #1c1c1e;
+            }
+        }
+
+        @media print {
+            .resume-header {
+                display: none;
+            }
+
+            .resume-viewer {
+                display: none;
+            }
+
+            .resume-image-link {
+                display: block;
+                max-width: none;
+                padding: 0;
+            }
+
+            .resume-image {
+                box-shadow: none;
+                border-radius: 0;
             }
         }
     </style>
@@ -102,9 +163,12 @@
                 <a href="resume.pdf" download>Download PDF</a>
             </nav>
         </header>
-        <iframe class="resume-viewer" src="resume.pdf" title="Akshat Aggarwal resume PDF">
-            <p>PDF preview unavailable. <a href="resume.pdf">Download resume (PDF)</a>.</p>
-        </iframe>
+        <section class="resume-preview" aria-label="Resume preview">
+            <iframe class="resume-viewer" src="resume.pdf" title="Akshat Aggarwal resume PDF"></iframe>
+            <a class="resume-image-link" href="resume.pdf">
+                <img class="resume-image" src="img/resume.png" width="1241" height="1754" alt="Akshat Aggarwal resume preview. Tap to open the PDF.">
+            </a>
+        </section>
     </main>
 </body>
 
