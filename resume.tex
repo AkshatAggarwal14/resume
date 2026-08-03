@@ -36,11 +36,11 @@
 
 \newcommand{\tiniestBulletSep} { \vspace{0.5mm} }
 
-\newcommand{\tinyBulletSep} { \vspace{2.5mm} }
+\newcommand{\tinyBulletSep} { \vspace{2.25mm} }
 
-\newcommand{\bulletSep} { \vspace{1.5mm} }
+\newcommand{\bulletSep} { \vspace{1.3mm} }
 
-\newcommand{\sectionSep} { \vspace{4.25mm} }
+\newcommand{\sectionSep} { \vspace{3.5mm} }
 
 \newcommand{\lineunder} {
     \vspace*{-8pt} \\
@@ -138,7 +138,7 @@
 \begin{center}
     {\textbf{\Huge \scshape Akshat Aggarwal}} \\ \vspace{4pt}
     \small \textcolor{black}{\raisebox{-0.1\height}\faPhone\
-        7876212728} ~ \href{mailto:akshataggarwal1411@gmail.com}{{\raisebox{-0.2\height}\faEnvelope\  \underline{akshataggarwal1411@gmail.com}}} ~
+        \href{tel:+917876212728}{7876212728}} ~ \href{mailto:akshataggarwal1411@gmail.com}{{\raisebox{-0.2\height}\faEnvelope\  \underline{akshataggarwal1411@gmail.com}}} ~
     \href{https://www.linkedin.com/in/akshataggarwal1411/}{{\raisebox{-0.2\height}\faLinkedinSquare\ \underline{linkedin.com/in/akshataggarwal1411}}}  ~
     \href{https://github.com/AkshatAggarwal14}{{\raisebox{-0.2\height}\faGithub\ \underline{github.com/AkshatAggarwal14}}}
     % \faPhone~(+91) 7876212728
@@ -160,18 +160,18 @@
 
 \experienceCompany{Intuit}{Bengaluru, India}
 \experienceRole{Software Engineer 2}{Feb 2026 - Present}{
-    \item Built an \textbf{AI-assisted workflow} for reviewing, editing, and bulk-applying accounting-dimension recommendations, combining centralized \textbf{React} state management with \textbf{Kafka} consumers and outbox events.
-    \item Engineered an event-driven \textbf{data pipeline} that ingests third-party data, provisions analytics infrastructure from schema events, and surfaces customer KPIs across \textbf{multiple domains}; reduced application onboarding from \textbf{months to weeks}.
-    \item Pioneered Intuit's \textbf{first dynamic RBAC} implementation, enabling user-created custom objects to self-register as authorization resources with custom, per-object \textbf{CRUD permissions}.
-    \item Spearheaded a system that automatically manages multi-entity dimension lifecycle changes, processing \textbf{$\sim$4,500 companies/month} and reducing Jira support toil by \textbf{$\sim$90\%} (from $\sim$50 to 4--5 tickets/month).
+    \item Built an \textbf{AI-assisted workflow} for reviewing, editing, and bulk-applying data recommendations, combining centralized \textbf{React} state management with high-throughput \textbf{Kafka consumers} and outbox event patterns.
+    \item Engineered an event-driven pipeline using \textbf{standardized System Objects} (vertical schemas) to ingest third-party data and auto-provision analytics infra from schema events, cutting app onboarding to Intuit Enterprise Suite from \textbf{months to weeks}.
+    \item Pioneered Intuit's \textbf{first dynamic RBAC implementation}, enabling user-created custom objects to self-register as authorization resources with \textbf{granular, per-object CRUD permissions}.
+    \item Spearheaded an automated lifecycle engine processing \textbf{$\sim$4,500 entities/month}, eliminating recurring customer support inquiries and reducing operational support toil by \textbf{$\sim$90\%} (from $\sim$50 to 4--5 tickets/month).
 }
 \tiniestBulletSep
 
 \experienceRole{Software Engineer 1}{Aug 2024 - Jan 2026}{
-    \item Delivered multi-entity financial-dimension capabilities across \textbf{React, GraphQL, and backend services}, enabling consolidated businesses to manage shared dimensions across companies.
-    \item Co-led bulk application of financial dimensions across transaction line items, reducing repetitive bookkeeping and driving a \textbf{7$\times$ increase in feature engagement}.
-    \item Shipped \textbf{AI-powered dimension recommendations} for transaction forms, increasing consistent categorization; recommendations drove \textbf{33\%} of dimension interactions after launch.
-    \item Co-designed and launched a secure self-service SQL platform with scoped authorization, read-only database access, query validation, audit logging, and guardrails, accelerating production data-fix verification.
+    \item Delivered end-to-end multi-entity capabilities across \textbf{Java, Kotlin, GraphQL, and React}, enabling consolidated enterprise systems to seamlessly manage shared business entities across multi-company deployments.
+    \item Co-led \textbf{bulk metadata tagging} across transaction line items, eliminating repetitive manual workflows and driving a \textbf{7$\times$ increase in feature engagement}.
+    \item Shipped \textbf{AI-assisted recommendation services} for high-volume financial transaction forms, driving \textbf{33\%} of user interactions post-launch.
+    \item Launched a secure \textbf{self-service database access platform} featuring read-only DB access, query validation, and audit guardrails to accelerate production data-fix verification and \textbf{incident response}.
 }
 \bulletSep
 
@@ -183,10 +183,10 @@
 
 \experienceCompany{Cisco}{Bengaluru, India}
 \experienceRole{Software Engineer Intern}{Jan 2024 - May 2024}{
-    \item Contributed to the \textbf{Secure Cloud Control (SCC v2)} project in the \textbf{XDR team}.
-    \item Conducted functional, automated, and client-side performance testing with \textbf{Jest} and \textbf{Playwright}, comparing SCC v1/v2 while maintaining at least 90\% code coverage.
-    \item Automated PR notifications via Webex APIs; integrated micro-apps with \textbf{Webpack Module Federation}.
-    \item Identified and resolved multiple bugs in the internal UI library and other products.
+    \item Contributed to core cloud security microservices for \textbf{Secure Cloud Control (SCC v2)} within the \textbf{XDR team}.
+    \item Built automated unit, integration, and performance tests using \textbf{Jest} and \textbf{Playwright}, maintaining \textbf{at least 90\% code coverage}.
+    \item Automated event notifications via Webex APIs and integrated micro-apps using \textbf{Webpack Module Federation}.
+    \item Diagnosed and resolved production bugs across internal core libraries and \textbf{distributed cloud UI components}.
 }
 
 % \bulletSep
@@ -334,13 +334,13 @@
 % ----------- Skills -----------
 
 \header{Skills}
-{\renewcommand{\arraystretch}{1.18}
+{\renewcommand{\arraystretch}{1.08}
 \begin{tabularx}{\textwidth}{@{}l X@{}}
-    \textbf{Languages}  & Java, Kotlin, TypeScript, Python, C/C++, SQL, GraphQL \\
+    \textbf{Languages}  & Java, Go, Kotlin, TypeScript, Python, C/C++, SQL, GraphQL \\
     \textbf{Databases}  & MySQL, PostgreSQL, MongoDB, Redis \\
     \textbf{Frameworks} & React, Spring Boot, Node.js, Express, FastAPI \\
     \textbf{Tools}      & AWS, Kafka, Docker, Kubernetes, Gatling, Playwright, Git \\
-    \textbf{Core}       & Data Structures \& Algorithms, DBMS, Operating Systems, Computer Networks, Distributed Systems \\
+    \textbf{Core}       & Distributed Systems \& Microservices, High-Throughput APIs, System Reliability (SRE/On-call), DBMS, Operating Systems \\
 \end{tabularx}
 }
 \end{document}
